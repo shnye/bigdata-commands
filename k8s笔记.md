@@ -73,7 +73,7 @@ spec: #资源规格
     spec:
       affinity:
         nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
+          requiredDuringSchedulingIgnoredDuringExecution: #硬亲和性
             nodeSelectorTerms:
               - matchExpressions:
                   - key: beta.kubernetes.io/os
@@ -265,3 +265,66 @@ Probe 支持一下三种检查方法
 
 ​	master节点 ==> API Server create pod ==>（信息存储到）etcd ==> Scheduler调度 API Server监听是否有新的pod创建 分配pod到节点，存到信息到etcd中 ==> 到node节点 ==> 通过kubelet 通过 API Server查看 并读取etcd拿到分配给该节点的pod ==> docker run
 
+
+
+### 9.影响pod调度属性
+
+- pod的资源限制会对pod的调度产生影响，会根据requests找到有足够的node进行调度。
+
+- 节点选择器标签(nodeSelector: env_role)影响pod调度 `kubectl label node node1 env_role=prod` 进行给节点打标签
+
+- 污点 Taint: 节点不做普通分配调度，**是节点属性** 不是pod属性，其他三点是pod属性
+
+  ​	场景：专用节点，配置特点硬件节点，基于Taint驱逐
+
+  ​	查看污点情况命令 `kubectl describe node nodename | grep Taint`
+
+  ​	值有三个 NoSchedule：一定不被调度  PerferNoSchedule：尽量不被调度  NoExecute：不会调度，并且还会驱逐Node已有的pod
+
+  ​	添加污点命令: `kubectl taint node nodename key = value`
+
+  ​	污点容忍：tolerations  key + operator + value + effect 控制
+
+- 节点亲和性 nodeAffinity 
+
+  ​	具体参数参照官方文件 
+
+  ​	常用操作符 In NotIn Exists Gt Lt DoesNotExists 
+
+  ​	硬亲和性 约束条件必须满足 key + 操作符 + values 进行约束 不满足等待
+
+  ​	软亲和性  尝试满足  key + 操作符 + values 进行约束
+
+
+
+## controller基础知识
+
+### 1.什么是controller
+
+- 集群上管理和运行容器的对象，实际存在的。
+- 无状态应用部署。
+- 有状态的应用部署。
+- 定时任务
+- 。。。
+
+### 2.pod和controller的关系
+
+Pod是通过Controller实现应用的运维，比如伸缩，滚动升级等。
+
+Pod和controller是通过labels标签来建立关系。selector.MatchLable.app labels.app 建立
+
+### 3.Deployment控制器应用场景
+
+- 部署无状态应用 。例如：web服务，微服务等等 
+- 管理Pod和ReplicaSet。
+- 部署，滚动升级等功能。
+
+### 4.Deployment控制器部署应用
+
+`kubectl expose deployment web --port=80 --type-NodePoint --target-point=80 --name=web1 -0 yaml >web1.yaml`
+
+`kubectl apply -f web1.yaml`
+
+### 5.升级回滚
+
+### 6.弹性伸缩
