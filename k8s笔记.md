@@ -313,6 +313,8 @@ Pod是通过Controller实现应用的运维，比如伸缩，滚动升级等。
 
 Pod和controller是通过labels标签来建立关系。selector.MatchLable.app labels.app 建立
 
+deployment是最常用的控制器（无状态）。
+
 ### 3.Deployment控制器应用场景
 
 - 部署无状态应用 。例如：web服务，微服务等等 
@@ -327,4 +329,180 @@ Pod和controller是通过labels标签来建立关系。selector.MatchLable.app l
 
 ### 5.升级回滚
 
+应用升级
+
+- ​	通过image:image_name:version 指定版本
+- ​	`kubectl set image deployment web nginx=nginx:1.15` 进行升级，部署好新的版本以后才会停止老版本
+- ​	`kubectl rollout status deployment web` 查看应用升级状态
+- ​	`kubectl rollout history deployment web` 查看应用升级的历史版本
+
+
+
+应用回滚
+
+- ​	`	kubectl rollout undo deployment web` 回滚到上个版本
+- ​	`		kubectl rollout undo deployment web --to-revision=2`  回滚到指定版本
+
 ### 6.弹性伸缩
+
+​	`Kubectl scale deployment web --replicas=10` 弹性伸缩
+
+
+
+## Service
+
+定义一组pod的访问规则（负载均衡）
+
+防止pod失联（服务发现）
+
+
+
+### 1.pod和service 关系
+
+根据label 和selector标签建立关联
+
+service 虚拟ip（vip ）通过虚拟ip进行访问
+
+### 2.常用的service类型
+
+ClusterIP：集群内部进行使用 ，例如：前后端内部访问，默认值
+
+NodePort：对外访问应用使用 例如：nginx
+
+LoadBalancer 对外访问应用使用，可以连接公有云，暴露到公网 暂时没搞懂
+
+
+
+## 不同Controller部署
+
+### 1.无状态
+
+- 认为pod都是一样的
+
+- 没有顺序的要求
+
+- 不用考虑在哪个node上运行
+
+- 随意进行伸缩和扩展
+
+  
+
+### 2.有状态
+
+- 无状态的因素都需要考虑到。
+- 让每个pod都是独立的，保持pod的启动顺序，唯一性。
+- 通过唯一的网络标识符，持久存储，有序的特点。
+- 比如mysql的主从。
+
+
+
+### 3.部署有状态应用
+
+clusterIP要设置为none 
+
+控制器 StatefulSet
+
+
+
+### 4.deployment，statefulset区别
+
+根据主机名+一定规则生成域名
+
+每个pod都会有唯一的主机名 格式：主机名称.service名称.名称空间.svc.cluster.local
+
+
+
+### 5.守护进程DeamonSet
+
+在每个node上运行一个pod，新加入的node也同样运行在一个pod
+
+例如在每个节点安装数据采集工具
+
+
+
+### 6.一次性，定时任务
+
+一次性任务
+
+apiVersion: batch:v1
+
+kind: job
+
+backoffLimit: 4 失败重试次数
+
+结束后
+
+kubectl delete -f job.yaml 删除任务
+
+
+
+定时任务
+
+可以使用cron 表达式设置执行频率 例如 schedule:"*/1 * * * *"
+
+apiVersion: batch:v1
+
+kind: cronjob
+
+
+
+kubectl get cronjobs 获取定时任务信息
+
+
+
+## 配置管理
+
+### 1.secret
+
+作用：对数据进行加密，存储到etcd里，让pod容器以外在volume的方式进行访问
+
+场景: 凭证
+
+```yaml
+apiVersion: v1
+
+kind: Secret
+
+metadata:
+
+	name: mysecret
+
+type: Opaque
+
+data:
+
+	username: xxxxx
+
+	password: yyyyyy
+```
+
+步骤：1创建secret加密(base64)数据 ——> kubectl create -f secret.ymal ——> 查看 kubectl get secret
+
+使用1: 以变量的形式挂载到pod容器中env.valuefrom.secretKeyRef.name.key，在容器中echo $key 即可获取到变量。
+
+使用2：以volume的方式挂载 
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mypod
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    volumeMounts:
+    - name: foo
+      mountPath: "/etc/foo"
+      readOnly: true
+  volumes:
+  - name: foo
+    secret:
+      secretName: mysecret
+```
+
+
+
+### 2.ConfigMap
+
+数据不加密存储到etcd 让pod以变量或者volume挂载到容器中
