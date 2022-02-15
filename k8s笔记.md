@@ -503,6 +503,88 @@ spec:
 
 
 
-### 2.ConfigMap
+### 2.configMap
 
 数据不加密存储到etcd 让pod以变量或者volume挂载到容器中
+
+场景：配置文件
+
+步骤：
+
+```shell
+1 创建configMap 
+
+kubectl create configmap redis-config --from-file=reidis.properties
+
+kubectl get cm
+
+kubectl describe cm redis-config
+
+#变量方式
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: myconfig
+  namespace: default
+data:
+  special.level: info
+  special.type: hello
+
+2 使用
+#volumes 方式
+volumes:
+  - name: config-volume
+    创建configMap:
+      name: redis-config
+
+#变量方式 
+env:
+        - name: LEVEL
+          valueFrom:
+            configMapKeyRef:
+              name: myconfig
+              key: special.level
+        - name: TYPE
+          valueFrom:
+            configMapKeyRef:
+              name: myconfig
+              key: special.type
+```
+
+  
+
+## K8s集群安全机制
+
+### 1.概述
+
+（1）访问k8s集群的时候，需要经过三个步骤完成操作
+
+- 认证
+- 鉴权（授权）
+- 准入控制
+
+（2）进行访问时候，过程中都需要经过apiserver，做统一协调，访问过程选中需要证书，token，或者用户名+密码，如果要访问pod还需要一些serviceAccount。
+
+
+
+### 2.第一步认证
+
+传输安全：对外不暴露8080端口 只能内部访问，对外统一使用6443端口
+
+认证：客户端身份认证常用方式：1 https证书认证，基于ca证书  2 基于http token识别用户 3 http认证 用户名+密码 
+
+
+
+### 3.鉴权（授权）
+
+RBAC的方式进行鉴权操作
+
+基于角色的访问控制
+
+
+
+
+
+### 4.准入控制
+
+就是准入控制器的列表，如果列表中有请求的内容，则通过，没有则拒绝。
