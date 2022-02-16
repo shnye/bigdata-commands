@@ -1067,15 +1067,77 @@ containerPort是pod内部容器的端口，targetPort映射到containerPort。
 
 helm是一个k8s的包管理工具，例如apt yum 可以很方便的将之前打好的yaml文件部署到k8s上
 
-### helm三个重要概念
+### 1.helm三个重要概念
 
 - helm 是一个命令行客户端工具，用于chart的创建打包发布管理
 - Chart 把yaml进行打包，是yaml的集合，应用描述。
 - Release 基于chart部署实体，应用级别的版本管理
 
-### V3版本新特性
+
+
+### 2.V3版本新特性
 
 - 删除了tiller【连接helm和kube-apiserver】（架构变化）==>通过kube-config进行连接
 - realease可以再不同命名空间重用
 - 可以将chart推导docker仓库中
+
+
+
+### 3.安装和配置
+
+1.安装helm
+
+下载helm安装压缩文件，上传到服务器
+
+解压helm压缩文件，把解压之后的目录移动到/usr/bin目录下即可
+
+
+
+2配置helm
+
+添加仓库 helm repo add 仓库名称(随便写) 仓库地址（用阿里云镜像即可）
+
+helm update 更新
+
+Helm repo list 查看
+
+删除仓库 helm remove 仓库名称
+
+
+
+### 简单使用
+
+1.搜索应用
+
+helm search repo 名称
+
+
+
+2.根据搜索内容选择进行安装
+
+helm install 名称 搜索后应用名称
+
+helm list  
+
+helm status 名称 查看状态
+
+
+
+3需要暴露端口则修改service yaml 文件 type: ClusterIP ==>NodePort
+
+kubectl edit svc name
+
+
+
+### 4.自己创建chart
+
+1.使用命令创建chart ：helm create chart名称，后进入该chart名称文件夹
+
+2.把yaml文件放到templates文件夹下，Chartyaml 当前chart属性配合信息，values.yaml 可以使用全局变量
+
+3 helm install name chat名称 安装chart
+
+
+
+
 
