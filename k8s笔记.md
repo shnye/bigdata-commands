@@ -1135,7 +1135,61 @@ kubectl edit svc name
 
 2.把yaml文件放到templates文件夹下，Chartyaml 当前chart属性配合信息，values.yaml 可以使用全局变量
 
-3 helm install name chat名称 安装chart
+3 helm install name chart名称 安装chart
+
+4 应用升级 helm upgrade chart名称 chart文件夹
+
+
+
+### 5.yaml高效复用
+
+通过values.yaml 中配置变量进行操作，在具体的yaml文件中定义变量值
+
+yaml文件大题有几个地方不同：
+
+- image
+- tag
+- label
+- port
+- replicas
+
+步骤
+
+- 在template中使用values.yaml变量（注意有个空格）
+- 通过表达式形式使用全局变量：{{ .Values.变量名}} 特殊：获取版本名称： {{ .Release.Name}}
+- `helm install --dry-run` 名称 chart文件夹 查看yaml
+
+
+
+## 持久化储存
+
+数据卷 emptydir 是本地数据卷，pod重启数据就不存在了，需要进行持久化存储
+
+### 1.nfs
+
+nfs，网络储存：只要存放数据的服务器还在，数据就还存在
+
+安装nfs  `yum install -y nfs-utils`
+
+设置挂载路径 `vim /etc/exports` 下设置 /data/nfs *{rw,no_root_squash}
+
+挂载路径需要创建出来 `mkdir /data/nfs`
+
+nfs服务器启动nfs服务 `systemctl start nfs`
+
+在k8s集群node挂载nfs（各个节点安装nfs）
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
