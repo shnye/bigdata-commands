@@ -1,5 +1,178 @@
 # k8s笔记
 
+#  通过kubeadm 安装
+
+## 1.1 环境设置
+
+```shell
+TYPE=Ethernet
+PROXY_METHOD=none
+BROWSER_ONLY=no
+BOOTPROTO=static
+DEFROUTE=yes
+IPV4_FAILURE_FATAL=no
+IPV6INIT=yes
+IPV6_AUTOCONF=yes
+IPV6_DEFROUTE=yes
+IPV6_FAILURE_FATAL=no
+IPV6_ADDR_GEN_MODE=stable-privacy
+NAME=ens33
+UUID=3daa5631-e489-4a08-b25a-6b65a601663b
+DEVICE=ens33
+ONBOOT=yes
+IPADDR=192.168.102.131
+GATEWAY=192.168.102.2
+NETMASK=255.255.255.0
+DNS1=8.8.8.8
+IPV6_PEERDNS=yes
+IPV6_PEERROUTES=yes
+IPV6_PRIVACY=no
+
+```
+
+
+
+```shell
+# 关闭防火墙：
+$ systemctl stop firewalld 
+$ systemctl disable firewalld 
+ 
+# 关闭 selinux： 
+$ sed -i 's/enforcing/disabled/' /etc/selinux/config # 永久 
+$ setenforce 0 # 临时
+
+# 关闭 swap： 
+$ swapoff -a # 临时
+$ vim /etc/fstab # 把swap 注释掉
+
+# 主机名： 
+$ hostnamectl set-hostname <hostname> 
+
+# 在 master 添加 hosts： 
+$ cat >> /etc/hosts << 
+EOF 
+192.168.102.131 k8s-master 
+192.168.102.132 k8s-node1 
+192.168.102.133 k8s-node2 
+EOF 
+
+# 将桥接的 IPv4 流量传递到 iptables 的链：
+$ cat > /etc/sysctl.d/k8s.conf << 
+EOF 
+net.bridge.bridge-nf-call-ip6tables = 1
+net.bridge.bridge-nf-call-iptables = 1 
+EOF 
+$ sysctl --system 
+
+# 生效 6.7 时间同步： 
+$ yum install ntpdate -y 
+$ ntpdate time.windows.com
+```
+
+
+
+## 1.2 所有节点安装 Docker/kubeadm/kubelet 
+
+```shell
+#Kubernetes 默认 CRI（容器运行时）为 Docker，因此先安装 Docker。 
+#（1）安装 Docker 
+$ wget https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo -O /etc/yum.repos.d/docker-ce.repo 
+$ yum -y install docker-ce-18.06.1.ce-3.el7 
+$ systemctl enable docker && systemctl start docker $ docker --version 
+
+#（2）添加阿里云 YUM 软件源 设置仓库地址 
+$ vim /etc/docker/daemon.json
+
+{ "registry-mirrors": ["https://b9pmyelo.mirror.aliyuncs.com"] }
+
+
+#（3）添加yum源  
+$ vim /etc/yum.repos.d/kubernetes.repo
+
+[kubernetes] 
+name=Kubernetesbaseurl=https://mirrors.aliyun.com/kubernetes/yum/repos/kubernetes-el7-x86_64 
+enabled=1 
+gpgcheck=0 
+repo_gpgcheck=0 
+gpgkey=https://mirrors.aliyun.com/kubernetes/yum/doc/yum-key.gpg 
+https://mirrors.aliyun.com/kubernetes/yum/doc/rpm-package-key.gpg
+```
+
+
+
+```shell
+#安装kubelet kubeadm kubectl
+yum install -y kubelet-1.18.0 kubeadm-1.18.0 kubectl-1.18.0
+```
+
+
+
+## 1.3 master节点初始化
+
+```shell
+#在master节点执行
+kubeadm init 
+--apiserver-advertise-address=192.168.102.131  #主机地址
+--image-repository registry.aliyuncs.com/google_containers  #设置阿里云地址
+--kubernetes-version v1.18.0 #版本
+--service-cidr=10.96.0.0/12 #不冲突即可
+--pod-network-cidr=10.244.0.0/16 #不冲突即可
+
+#若出现以下错误需在所有节点执行
+#[ERROR FileContent--proc-sys-net-ipv4-ip_forward]: /proc/sys/net/ipv4/ip_forward contents are not se
+
+sysctl -w net.ipv4.ip_forward=1
+
+#执行init成功后 在master节点执行
+#To start using your cluster, you need to run the following as a regular user:
+
+mkdir -p $HOME/.kube 
+
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config 
+
+sudo chown $(id -u):$(id -g) $HOME/.kube/config 
+```
+
+
+
+## 1.4 worker节点加入集群
+
+```shell
+#worker节点执行 加入集群
+kubeadm join 192.168.102.131:6443 --token q66qpz.svo510amnlr21rld \
+    --discovery-token-ca-cert-hash sha256:5570d2e88820c460582fd7ce71e03fa9d0db69798be00c11da2ef4599fc9dc80
+
+
+# 验证是否加入
+$ kubectl get nodes
+```
+
+
+
+## 1.5 安装网络插件
+
+```shell
+#安装pod网络插件 CNI
+kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+```
+
+
+
+## 1.6 集群测试
+
+```shell
+#测试k8s集群
+$ kubectl create deployment nginx --image=nginx 
+$ kubectl expose deployment nginx --port=80 --type=NodePort 
+$ kubectl get pod,svc
+```
+
+
+
+#  k8s基础概念
+
+
+
 ## kubectl命令行工具
 
 ```shell
@@ -1179,19 +1352,150 @@ nfs服务器启动nfs服务 `systemctl start nfs`
 
 在k8s集群node挂载nfs（各个节点安装nfs）
 
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-dep1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+        volumeMounts:
+        - name: wwwroot
+          mountPath: /usr/share/nginx/html
+        ports:
+        - containerPort: 80
+      volumes:
+        - name: wwwroot
+          nfs:
+            server: 192.168.44.134
+            path: /data/nfs
+```
+
+### 2PV和PVC
+
+pv：持久化存储，对存储资源进行抽象，对外提供可以调用的地方（生产者）
+
+PVC：用于调用，不需要关系内部实现细节（消费者）
+
+ 部署流程：应用部署==>定义pvc（绑定pv）==>定义pv（数据存储服务器ip，路径，会根据容量，匹配模式进行）
+
+
+
+```yaml
+#pv
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: my-pv
+spec:
+  capacity:
+    storage: 5Gi
+  accessModes:
+    - ReadWriteMany
+  nfs:
+    path: /k8s/nfs
+    server: 192.168.44.134
+    
+#PVC  
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-dep1
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+        volumeMounts:
+        - name: wwwroot
+          mountPath: /usr/share/nginx/html
+        ports:
+        - containerPort: 80
+      volumes:
+      - name: wwwroot
+        persistentVolumeClaim:
+          claimName: my-pvc
+
+---
+
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: my-pvc
+spec:
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 5Gi
+```
 
 
 
 
 
+## 集群资源监控
+
+### 监控指标：
+
+- ​	集群监控（节点资源利用率，节点数，运行的pods ）
+- ​	pod监控（容器指标，应用程序）
+- ​	。。。。。。
 
 
 
+### 监控平台搭建方案
+
+Prometheus + Grafana
+
+Prometheus ：
+
+- ​	开源
+- ​	监控，报警，数据库
+- ​	以http协议周期性抓取被监控组建状态
+- ​	不需要复杂的集成过程，使用http接口接入就行了
 
 
 
+DaemSet 守护进程 + rbac访问权限 + configmap存储相关配置参数 + deploy部署本体 + svc Nodeport暴露端口 
+
+ 
+
+Grafana：
+
+- ​	开源的数据分析和可视化工具
+- ​	支持多种数据源
 
 
 
+deploy + ingress + svc 部署
 
+打开Grafana 配置Prometheus 数据源，选择展示模板即可
+
+
+
+## 高可用集群
+
+load balancer 来实现负载均衡 + 高可用 + 检查master节点的状态
+
+node 连接 master 时候连接VIP（虚拟IP）来实现
 
