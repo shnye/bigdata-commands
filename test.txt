@@ -1,0 +1,23 @@
+{
+  "insecure-registries":["10.10.10.173:7000"],
+  "registry-mirrors": ["https://e5iunq9w.mirror.aliyuncs.com"],
+  "data-root":"/data/docker",
+  "dns": ["8.8.8.8", "114.114.114.114"]
+}
+
+
+FROM 10.10.10.173:7000/python:base
+MAINTAINER mufeng
+
+WORKDIR /opt
+
+#add python
+COPY /start.sh /opt
+RUN chmod +777 /opt/start.sh
+RUN pip install kafka==1.3.5 -i https://mirrors.aliyun.com/pypi/simple/
+RUN pip install keras==2.3.1 -i https://mirrors.aliyun.com/pypi/simple/
+RUN pip install bert4keras==0.7.7 -i https://mirrors.aliyun.com/pypi/simple/
+RUN pip install numba==0.52.0 -i https://mirrors.aliyun.com/pypi/simple/
+RUN pip install kafka -i https://mirrors.aliyun.com/pypi/simple/
+RUN pip install kafka-python -i https://mirrors.aliyun.com/pypi/simple/
+RUN pip install pykafka -i https://mirrors.aliyun.com/pypi/simple/
