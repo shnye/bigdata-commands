@@ -1,9 +1,9 @@
-package com.mf.utils
+package com.mf.sink
 
-import java.sql.{Connection, Date, DriverManager, PreparedStatement}
-import java.text.SimpleDateFormat
-import com.mf.config
+import java.sql.{Connection, DriverManager, PreparedStatement}
+
 import com.mf.bean.result
+import com.mf.config
 import org.apache.flink.configuration.Configuration
 import org.apache.flink.streaming.api.functions.sink.{RichSinkFunction, SinkFunction}
 

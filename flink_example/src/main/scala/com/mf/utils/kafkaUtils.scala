@@ -15,7 +15,8 @@ object kafkaUtils {
     properties.setProperty("group.id", config.KAFKA_GROUP_ID)
     properties.setProperty("key.deserializer", "org.apache.kafka.common.serialization.StringDeserializer")
     properties.setProperty("value.deserializer", "org.apache.kafka.common.serialization.StringDeserializer")
-    //properties.setProperty("auto.offset.reset", "latest")
+    properties.setProperty("enable,auto.commit","false")
+    //properties.setProperty("auto.offset.reset", "earliest")
 
     val KafkaStream: DataStream[String] = env.addSource(new FlinkKafkaConsumer011[String](topic, new SimpleStringSchema(), properties))
     KafkaStream

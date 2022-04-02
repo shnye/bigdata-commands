@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5af1de06-e084-420b-8c1c-7d54ab947c0a" name="Default Changelist" comment="" />
+    <list default="true" id="5af1de06-e084-420b-8c1c-7d54ab947c0a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/mf/custom_method/MyEvictor.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/mf/custom_method/MyTrigger.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/mf/sink/redisSink.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/mf/source/RedisSource.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/mf/utils/RedisUtils.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flink_example.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/mf/app/example.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/mf/app/example.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/mf/utils/MyJDBCSink.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/mf/sink/MyJDBCSink.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/mf/utils/kafkaUtils.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/mf/utils/kafkaUtils.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/mf/utils/redisSink.scala" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,6 +42,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -46,6 +63,7 @@
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="27B3xUt2ttRlsbYKSVgvbKJIbeP" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -53,8 +71,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.jscs" value="project" />
@@ -87,6 +107,7 @@
       <option name="presentableId" value="Default" />
       <updated>1648779898696</updated>
       <workItem from="1648779901259" duration="9247000" />
+      <workItem from="1648807143035" duration="8535000" />
     </task>
     <servers />
   </component>
@@ -98,13 +119,13 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="440" y="187" key="#Project_Structure/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1648779937830" />
-    <state x="578" y="298" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1648782556707">
+    <state x="578" y="298" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1648886256304">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="578" y="298" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1648782556707" />
-    <state x="653" y="218" key="#com.intellij.ide.util.MemberChooser" timestamp="1648797081836">
+    <state x="578" y="298" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1648886256304" />
+    <state x="653" y="218" key="#com.intellij.ide.util.MemberChooser" timestamp="1648882446358">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="653" y="218" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1648797081836" />
+    <state x="653" y="218" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1648882446358" />
   </component>
 </project>

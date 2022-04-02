@@ -6,7 +6,8 @@ import org.apache.flink.contrib.streaming.state.RocksDBStateBackend
 import org.apache.flink.streaming.api.{CheckpointingMode, TimeCharacteristic}
 import org.apache.flink.streaming.api.scala._
 import com.mf.config
-import com.mf.utils.{MyJDBCSink, MyPeriodicAssigner, kafkaUtils, redisSink}
+import com.mf.sink.{MyJDBCSink, redisSink}
+import com.mf.utils.{MyPeriodicAssigner, kafkaUtils}
 import org.apache.flink.streaming.api.functions.timestamps.BoundedOutOfOrdernessTimestampExtractor
 import org.apache.flink.streaming.api.windowing.assigners.TumblingProcessingTimeWindows
 import org.apache.flink.streaming.api.windowing.time.Time

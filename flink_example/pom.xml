@@ -42,6 +42,18 @@
             <artifactId>flink-java</artifactId>
             <version>${flink.version}</version>
         </dependency>
+        <!-- 日志相关依赖 -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.25</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.7.25</version>
+        </dependency>
 
         <dependency>
             <groupId>org.apache.flink</groupId>

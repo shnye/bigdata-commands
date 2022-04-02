@@ -1,14 +1,9 @@
-package com.mf.utils
+package com.mf.sink
 
-import java.sql.Date
-import java.text.SimpleDateFormat
-
-import com.alibaba.fastjson.JSONObject
 import com.mf.bean.result
+import com.mf.config
 import org.apache.flink.streaming.connectors.redis.common.config.FlinkJedisPoolConfig
 import org.apache.flink.streaming.connectors.redis.common.mapper.{RedisCommand, RedisCommandDescription, RedisMapper}
-import com.mf.config
-
 
 object redisSink {
 
