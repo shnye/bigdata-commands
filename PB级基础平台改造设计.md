@@ -54,10 +54,37 @@ this.outputBuffencapacity = conf. getInt(
 
 
 ```
+#### 场景2：datanode慢启动问题
+
+​	情景：集群越扩越大以后，机柜不够，带宽也不够。搬机房以后重启发现datanode等了8-10分钟才注册上来。
+
+​	原因分析：datanode每隔一段时间会在磁盘上记录时间以及使用多少存储空间。重启时候会和namenode存储当前存储信息，可以达到快速启动，但是如果没有这个记录文件，就会起一个线程对所有磁盘都要扫描一遍在汇报，如果数据量比较大，就需要扫描很久。
+
+```java
+//BlockPoolSlice.java 会执行构造函数
+
+
+
+
+
+
+//如果当前时间 - 最后一条记录时间 就会认为该值过期，就会重新进行扫描
+
+
+//修改过期时间改变硬编码，做成可配置。
+//但是可能会暂时造成可用空间暂时不准确，在下次datanode进行块汇报时，会进行更新
+```
 
 
 
 ## 基础平台BUG修复
 
+
+
+#### 场景1：
+
+​	双缓存刷写到Journalnode磁盘时，如果一直没有超过半数成功，或者失败，或者全部响应，超过了20秒，就会抛出TimeouException异常，调用方法的捕获TimeouException转成IO异常。直到logStream.flush()这个方法也抛出IO异常，被捕获这时候会打印出LOG.fatal 灾难型的错误，然后执行System.exit(status)导致namenode强制退出。
+
+有可能是有namenode full GC 导致，需要判断是否full GC 要扣除这部分的时间 ，在后面的版本有修复此问题。
 
 
