@@ -1,0 +1,14 @@
+version: "3.2"
+services:
+  flume1:
+    image: flume-1.9.0:v9
+    networks:
+      - devNet
+    environment:
+      - CONFIG={"sinks":{"kES":{"hostNames":"es1:9200","clusterName":"es_cluster"}}}
+    deploy:
+      restart_policy:
+        condition: on-failure
+networks:
+    devNet:
+      external: true

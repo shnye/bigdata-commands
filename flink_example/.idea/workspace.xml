@@ -2,19 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5af1de06-e084-420b-8c1c-7d54ab947c0a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/mf/custom_method/MyEvictor.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/mf/custom_method/MyTrigger.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/mf/sink/redisSink.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/mf/source/RedisSource.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/mf/utils/RedisUtils.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flink_example.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/com/mf/app/example.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/mf/app/example.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/mf/utils/MyJDBCSink.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/mf/sink/MyJDBCSink.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/mf/utils/kafkaUtils.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/mf/utils/kafkaUtils.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/mf/utils/redisSink.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../简单命令.md" beforeDir="false" afterPath="$PROJECT_DIR$/../简单命令.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,9 +75,10 @@
     <property name="node.js.selected.package.standard" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="scala_project_settings_configurable.last_selected_tab_index" value="6" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="SbtLocalSettings">
     <option name="projectSyncType">
@@ -107,7 +98,11 @@
       <option name="presentableId" value="Default" />
       <updated>1648779898696</updated>
       <workItem from="1648779901259" duration="9247000" />
-      <workItem from="1648807143035" duration="8535000" />
+      <workItem from="1648807143035" duration="10040000" />
+      <workItem from="1649411230935" duration="4000" />
+      <workItem from="1649476114912" duration="914000" />
+      <workItem from="1649665530975" duration="248000" />
+      <workItem from="1649817394731" duration="400000" />
     </task>
     <servers />
   </component>
@@ -127,5 +122,14 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="653" y="218" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1648882446358" />
+    <state x="453" y="179" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1649477348960">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="453" y="179" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1649477348960" />
+    <state x="500" y="155" key="SettingsEditor" timestamp="1649817452096">
+      <screen x="0" y="25" width="2560" height="1330" />
+    </state>
+    <state x="328" y="103" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1649477367406" />
+    <state x="500" y="155" key="SettingsEditor/0.25.2560.1330@0.25.2560.1330" timestamp="1649817452096" />
   </component>
 </project>

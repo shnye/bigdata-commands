@@ -8,10 +8,12 @@ import org.apache.flink.streaming.api.scala._
 import com.mf.config
 import com.mf.sink.{MyJDBCSink, redisSink}
 import com.mf.utils.{MyPeriodicAssigner, kafkaUtils}
+import org.apache.flink.api.common.serialization.SimpleStringSchema
 import org.apache.flink.streaming.api.functions.timestamps.BoundedOutOfOrdernessTimestampExtractor
 import org.apache.flink.streaming.api.windowing.assigners.TumblingProcessingTimeWindows
 import org.apache.flink.streaming.api.windowing.time.Time
 import org.apache.flink.streaming.api.windowing.triggers.{ContinuousEventTimeTrigger, ContinuousProcessingTimeTrigger}
+import org.apache.flink.streaming.connectors.kafka._
 import org.apache.flink.streaming.connectors.redis.RedisSink
 
 object example {
@@ -105,6 +107,10 @@ object example {
 
     //todo 输出到redis
     outputStream.addSink(new RedisSink[result](redisSink.conf,redisSink.myMapper))
+
+    //TODO 输出到kafka
+    // 注意 假如输入输出都是kafka flink 会自动做好数据一致性的处理，不需要额外操作
+    //outputStream.addSink(new FlinkKafkaProducer011[String](config.KAFKA_BOOTSTRAP_SERVERS,"topic",new SimpleStringSchema()))
 
 
 

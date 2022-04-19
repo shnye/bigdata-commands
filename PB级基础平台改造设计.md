@@ -81,10 +81,47 @@ this.outputBuffencapacity = conf. getInt(
 
 
 
-#### 场景1：
+#### 场景1：journalnode oom错误导致datanode 退出
 
 ​	双缓存刷写到Journalnode磁盘时，如果一直没有超过半数成功，或者失败，或者全部响应，超过了20秒，就会抛出TimeouException异常，调用方法的捕获TimeouException转成IO异常。直到logStream.flush()这个方法也抛出IO异常，被捕获这时候会打印出LOG.fatal 灾难型的错误，然后执行System.exit(status)导致namenode强制退出。
 
-有可能是有namenode full GC 导致，需要判断是否full GC 要扣除这部分的时间 ，在后面的版本有修复此问题。
+​	有可能是有namenode full GC 导致，需要判断是否full GC 要扣除这部分的时间 ，在后面的版本有修复此问题。
+
+```java
+//报错代码，点击Logstream.fLush()进入
+	//把数据写到本地的磁盘journalnode
+			Logstream.fLush();
+	}
+} catch (IOException ex) {
+  synchronized (this) {
+    final String msg =
+			"Could not sync enough journals to persistent storage. " +"Unsynced transactions: "+ (txid - synctxid); 
+    //fata
+		//灾难型的错误
+    LOG. fatal(msg, new Exception() );
+		synchronized(journalSetLock) {
+      IOUtils.cleanup(LOG, journalSet); 
+    }
+//TODO
+terminate ( status: 1, msg);
+	}
+}
+......
+  System.exit(status)
+```
 
 
+
+## 优秀代码鉴赏
+
+#### 0.8Kafak生产者原码改造
+
+0.8版本生产者提交时一条一条处理，效率不够高，0.9时采用批处理解决了此问题。 
+
+分段加锁 + double check +读写分离,高性能数据结构 + 内存池
+
+
+
+
+
+## 管理和监控
