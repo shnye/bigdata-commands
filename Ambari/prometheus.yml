@@ -1,0 +1,20 @@
+global:
+  scrape_interval:     60s
+  evaluation_interval: 60s
+ 
+scrape_configs:
+  - job_name: prometheus
+    static_configs:
+      - targets: ['localhost:9090']
+        labels:
+          instance: prometheus
+  - job_name: test_linux
+    static_configs:
+      - targets: 
+          - 192.168.86.31:9100
+          - 192.168.86.32:9100
+  - job_name: test_docker
+    static_configs:
+      - targets: 
+          - 192.168.86.31:8080
+          - 192.168.86.32:8080
