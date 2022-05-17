@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a9e5fec4-1423-43d9-9d75-517f69a95d99" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="DevPartner.ProjectWorkspace">
+    <option name="runtimeAnalysisType" value="-1" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="$USER_HOME$/apache-maven-3.6.3/repository" />
+        <option name="mavenHome" value="$USER_HOME$/apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="$USER_HOME$/apache-maven-3.6.3/conf/settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="29EwFcRwokdH1opeEjflofbP8X6" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.jscs" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.jscs" value="" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.mf.dataStructure" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.CircleArrayQueueDemo2">
+    <configuration name="ArrayQueueDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mf.dataStructure.queue.ArrayQueueDemo" />
+      <module name="dataStructureAndAlgorithm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mf.dataStructure.queue.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CircleArrayQueueDemo2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mf.dataStructure.queue.CircleArrayQueueDemo2" />
+      <module name="dataStructureAndAlgorithm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mf.dataStructure.queue.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SparseArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mf.dataStructure.sparsearray.SparseArray" />
+      <module name="dataStructureAndAlgorithm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mf.dataStructure.sparsearray.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.CircleArrayQueueDemo2" />
+        <item itemvalue="Application.ArrayQueueDemo" />
+        <item itemvalue="Application.SparseArray" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SbtLocalSettings">
+    <option name="projectSyncType">
+      <map>
+        <entry key="$USER_HOME$/IdeaProjects/scala" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a9e5fec4-1423-43d9-9d75-517f69a95d99" name="Default Changelist" comment="" />
+      <created>1652691449529</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1652691449529</updated>
+      <workItem from="1652691455169" duration="12651000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="536" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1652769830511">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="536" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1652769830511" />
+    <state x="635" y="448" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1652772225851">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="635" y="448" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1652772225851" />
+    <state x="606" y="398" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1652772228142">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="606" y="398" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1652772228142" />
+    <state width="1638" height="276" key="GridCell.Tab.0.bottom" timestamp="1652780731561">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="276" key="GridCell.Tab.0.bottom/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1652780731561" />
+    <state width="1638" height="276" key="GridCell.Tab.0.center" timestamp="1652780731560">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="276" key="GridCell.Tab.0.center/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1652780731560" />
+    <state width="1638" height="276" key="GridCell.Tab.0.left" timestamp="1652780731560">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="276" key="GridCell.Tab.0.left/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1652780731560" />
+    <state width="1638" height="276" key="GridCell.Tab.0.right" timestamp="1652780731561">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="276" key="GridCell.Tab.0.right/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1652780731561" />
+  </component>
+</project>
