@@ -2,6 +2,13 @@ package com.mf.dataStructure.queue;
 
 import java.util.Scanner;
 
+
+/**
+ * 对前面的数组模拟队列的优化，充分利用数组.   因此将数组看做是一个环形的。(通过取模的方 式来实现即可)
+ * 分析说明：
+ * 尾索引的下一个为头索引时表示队列满，即将队 列容量空出一个作为约定,这个在做判断队列满的 时候需要注意 (rear + 1) % maxSize == front 满]
+ * rear == front [空]
+ */
 public class CircleArrayQueueDemo2 {
 
     //todo 将这个数组使用算法，该进程一个环形数组，取模来实现

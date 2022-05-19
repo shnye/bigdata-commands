@@ -2,6 +2,14 @@ package com.mf.dataStructure.queue;
 
 import java.util.Scanner;
 
+
+/**
+ * todo 需求
+ * 出队列操作getQueue
+ * 显示队列的情况showQueue
+ * 查看队列头元素headQueue
+ * 退出系统exit
+ */
 public class ArrayQueueDemo {
 
     //todo 数组无法重复使用需要优化

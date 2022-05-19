@@ -2,12 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9e5fec4-1423-43d9-9d75-517f69a95d99" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mf/dataStructure/linkedlist/SingleLinkedlListDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mf/dataStructure/linkedlist/TestStack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mf/dataStructure/linkedlist/DoubleLinkedListDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mf/dataStructure/linkedlist/Josepfu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataStructureAndAlgorithm.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mf/dataStructure/linkedlist/SingleLinkedlListDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mf/dataStructure/linkedlist/SingleLinkedlListDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mf/dataStructure/queue/ArrayQueueDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mf/dataStructure/queue/ArrayQueueDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mf/dataStructure/queue/CircleArrayQueueDemo2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mf/dataStructure/queue/CircleArrayQueueDemo2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mf/dataStructure/sparsearray/SparseArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mf/dataStructure/sparsearray/SparseArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mf/dataStructure/linkedlist/HeroNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mf/dataStructure/linkedlist/HeroNode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mf/dataStructure/linkedlist/SingleLinkedlList.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mf/dataStructure/linkedlist/SingleLinkedlList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mf/dataStructure/linkedlist/SingleLinkedlListDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mf/dataStructure/linkedlist/SingleLinkedlListDemo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mf/dataStructure/queue/ArrayQueue.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mf/dataStructure/queue/ArrayQueue.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mf/dataStructure/queue/ArrayQueueDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mf/dataStructure/queue/ArrayQueueDemo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mf/dataStructure/queue/CircleArray.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mf/dataStructure/queue/CircleArray.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mf/dataStructure/queue/CircleArrayQueueDemo2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mf/dataStructure/queue/CircleArrayQueueDemo2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mf/dataStructure/sparsearray/SparseArray.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mf/dataStructure/sparsearray/SparseArray.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +93,7 @@
       <recent name="com.mf.dataStructure" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SingleLinkedlListDemo">
+  <component name="RunManager" selected="Application.Josepfu">
     <configuration name="ArrayQueueDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.mf.dataStructure.queue.ArrayQueueDemo" />
       <module name="dataStructureAndAlgorithm" />
@@ -111,6 +120,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DoubleLinkedListDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mf.dataStructure.linkedlist.DoubleLinkedListDemo" />
+      <module name="dataStructureAndAlgorithm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mf.dataStructure.linkedlist.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Josepfu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mf.dataStructure.linkedlist.Josepfu" />
+      <module name="dataStructureAndAlgorithm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mf.dataStructure.linkedlist.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SingleLinkedlListDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.mf.dataStructure.linkedlist.SingleLinkedlListDemo" />
       <module name="dataStructureAndAlgorithm" />
@@ -124,25 +159,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SparseArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.mf.dataStructure.sparsearray.SparseArray" />
-      <module name="dataStructureAndAlgorithm" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.mf.dataStructure.sparsearray.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Josepfu" />
+        <item itemvalue="Application.DoubleLinkedListDemo" />
         <item itemvalue="Application.SingleLinkedlListDemo" />
         <item itemvalue="Application.CircleArrayQueueDemo2" />
         <item itemvalue="Application.ArrayQueueDemo" />
-        <item itemvalue="Application.SparseArray" />
       </list>
     </recent_temporary>
   </component>
@@ -165,7 +188,8 @@
       <updated>1652691449529</updated>
       <workItem from="1652691455169" duration="12651000" />
       <workItem from="1652780895981" duration="1154000" />
-      <workItem from="1652840429861" duration="8806000" />
+      <workItem from="1652840429861" duration="9106000" />
+      <workItem from="1652926271971" duration="8339000" />
     </task>
     <servers />
   </component>
@@ -177,10 +201,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="536" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1652769830511" />
-    <state x="653" y="245" key="#com.intellij.ide.util.MemberChooser" timestamp="1652858309188">
+    <state x="653" y="245" key="#com.intellij.ide.util.MemberChooser" timestamp="1652950674015">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="653" y="245" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1652858309188" />
+    <state x="653" y="245" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1652950674015" />
     <state x="635" y="448" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1652772225851">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -189,22 +213,22 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="606" y="398" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1652772228142" />
-    <state width="1636" height="237" key="GridCell.Tab.0.bottom" timestamp="1652862352497">
+    <state width="1636" height="237" key="GridCell.Tab.0.bottom" timestamp="1652954039582">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1636" height="237" key="GridCell.Tab.0.bottom/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1652862352497" />
-    <state width="1636" height="237" key="GridCell.Tab.0.center" timestamp="1652862352496">
+    <state width="1636" height="237" key="GridCell.Tab.0.bottom/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1652954039582" />
+    <state width="1636" height="237" key="GridCell.Tab.0.center" timestamp="1652954039581">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1636" height="237" key="GridCell.Tab.0.center/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1652862352496" />
-    <state width="1636" height="237" key="GridCell.Tab.0.left" timestamp="1652862352496">
+    <state width="1636" height="237" key="GridCell.Tab.0.center/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1652954039581" />
+    <state width="1636" height="237" key="GridCell.Tab.0.left" timestamp="1652954039581">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1636" height="237" key="GridCell.Tab.0.left/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1652862352496" />
-    <state width="1636" height="237" key="GridCell.Tab.0.right" timestamp="1652862352497">
+    <state width="1636" height="237" key="GridCell.Tab.0.left/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1652954039581" />
+    <state width="1636" height="237" key="GridCell.Tab.0.right" timestamp="1652954039582">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1636" height="237" key="GridCell.Tab.0.right/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1652862352497" />
+    <state width="1636" height="237" key="GridCell.Tab.0.right/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1652954039582" />
     <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1652856826205">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
