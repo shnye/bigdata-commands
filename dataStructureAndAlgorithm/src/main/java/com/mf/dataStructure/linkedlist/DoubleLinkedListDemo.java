@@ -5,16 +5,16 @@ public class DoubleLinkedListDemo {
         //测试
         //1 创建节点
         HeroNode2 hero1 = new HeroNode2(1, "宋江", "及时雨");
+        HeroNode2 hero4 = new HeroNode2(4,"林冲","豹子头");
         HeroNode2 hero2 = new HeroNode2(2,"卢俊义","玉麒麟");
         HeroNode2 hero3 = new HeroNode2(3,"吴用","智多星");
-        HeroNode2 hero4 = new HeroNode2(4,"林冲","豹子头");
 
         //2创建链表
         DoubleLinkedList doubleLinkedlList = new DoubleLinkedList();
-        doubleLinkedlList.add(hero1);
-        doubleLinkedlList.add(hero2);
-        doubleLinkedlList.add(hero3);
-        doubleLinkedlList.add(hero4);
+        doubleLinkedlList.addByOrder(hero1);
+        doubleLinkedlList.addByOrder(hero4);
+        doubleLinkedlList.addByOrder(hero3);
+        doubleLinkedlList.addByOrder(hero2);
 
         doubleLinkedlList.list();
 
@@ -58,6 +58,36 @@ class DoubleLinkedList{
 
     public void addByOrder(HeroNode2 heroNode){
         //todo 需要完成按顺序添加
+        HeroNode2 temp = head;
+        boolean flag = false;
+        while (true){
+            if(temp.next == null){
+                break;
+            }
+            if(temp.next.no > heroNode.no){
+                break;
+            }
+            if(temp.no == heroNode.no){
+                flag = true;
+                break;
+            }
+            temp = temp.next;
+        }
+        if(flag) {
+            System.out.printf("准备插入的编号%d 已经存在了，不能加入\n", heroNode.no);
+        }else{
+            if(temp.next != null){
+                temp.next.pre = heroNode;
+                heroNode.next = temp.next;
+            }
+
+            temp.next = heroNode;
+            heroNode.pre = temp;
+
+        }
+
+
+
     }
 
 

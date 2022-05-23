@@ -6,6 +6,9 @@ public class Josepfu {
         CircleSingleLinkedList circleSingleLinkedList = new CircleSingleLinkedList();
         circleSingleLinkedList.add(5);
         circleSingleLinkedList.show();
+
+        //测试约瑟夫问题
+        circleSingleLinkedList.count(1,2,5);
     }
 }
 
@@ -55,6 +58,48 @@ class CircleSingleLinkedList{
             }
         }
 
+    }
+
+    /**
+     * 根据用户输入，计算出出圈顺序
+     * @param startNo 起始位置
+     * @param countNum 数几次
+     * @param nums 最原始有几个
+     */
+    public void count(int startNo,int countNum,int nums){
+        //数据校验
+        if(first == null || startNo < 1 || startNo >nums){
+            System.out.println("参数输入有误");
+            return;
+        }
+        //创建一个辅助指针，指向环形链表最后一个节点，帮助完成出圈
+        Boy helper = first;
+        while (true){
+            if(helper.getNext() == first){
+                break;
+            }
+            helper = helper.getNext();
+        }
+        // 报数前 移动first 和 helper k-1次
+        for (int i = 0; i < startNo - 1; i++) {
+            first = first.getNext();
+            helper = helper.getNext();
+        }
+        //报数时 移动m-1次 然后出圈 当只剩一个节点时结束
+        while (true) {
+            if (helper == first){
+                break;
+            }
+            for (int i = 0; i < countNum - 1; i++) {
+                first = first.getNext();
+                helper = helper.getNext();
+            }
+            System.out.println(first.getNo() + "出圈");
+            first = first.getNext();
+            helper.setNext(first);
+
+        }
+        System.out.println("最后的编号为" + helper.getNo());
     }
 
 

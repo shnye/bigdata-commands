@@ -2,21 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9e5fec4-1423-43d9-9d75-517f69a95d99" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mf/dataStructure/linkedlist/DoubleLinkedListDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mf/dataStructure/linkedlist/Josepfu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mf/dataStructure/linkedlist/SingleLinkedlListDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mf/dataStructure/linkedlist/SingleLinkedlListDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mf/dataStructure/queue/ArrayQueueDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mf/dataStructure/queue/ArrayQueueDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mf/dataStructure/queue/CircleArrayQueueDemo2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mf/dataStructure/queue/CircleArrayQueueDemo2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mf/dataStructure/sparsearray/SparseArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mf/dataStructure/sparsearray/SparseArray.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mf/dataStructure/linkedlist/HeroNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mf/dataStructure/linkedlist/HeroNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mf/dataStructure/linkedlist/SingleLinkedlList.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mf/dataStructure/linkedlist/SingleLinkedlList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mf/dataStructure/linkedlist/SingleLinkedlListDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mf/dataStructure/linkedlist/SingleLinkedlListDemo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mf/dataStructure/queue/ArrayQueue.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mf/dataStructure/queue/ArrayQueue.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mf/dataStructure/queue/ArrayQueueDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mf/dataStructure/queue/ArrayQueueDemo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mf/dataStructure/queue/CircleArray.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mf/dataStructure/queue/CircleArray.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mf/dataStructure/queue/CircleArrayQueueDemo2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mf/dataStructure/queue/CircleArrayQueueDemo2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mf/dataStructure/sparsearray/SparseArray.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mf/dataStructure/sparsearray/SparseArray.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mf/dataStructure/linkedlist/DoubleLinkedListDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mf/dataStructure/linkedlist/DoubleLinkedListDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mf/dataStructure/linkedlist/Josepfu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mf/dataStructure/linkedlist/Josepfu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,7 +177,8 @@
       <workItem from="1652691455169" duration="12651000" />
       <workItem from="1652780895981" duration="1154000" />
       <workItem from="1652840429861" duration="9106000" />
-      <workItem from="1652926271971" duration="8339000" />
+      <workItem from="1652926271971" duration="8659000" />
+      <workItem from="1653013415156" duration="7286000" />
     </task>
     <servers />
   </component>
@@ -213,22 +202,26 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="606" y="398" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1652772228142" />
-    <state width="1636" height="237" key="GridCell.Tab.0.bottom" timestamp="1652954039582">
+    <state width="1636" height="221" key="GridCell.Tab.0.bottom" timestamp="1653032982350">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1636" height="237" key="GridCell.Tab.0.bottom/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1652954039582" />
-    <state width="1636" height="237" key="GridCell.Tab.0.center" timestamp="1652954039581">
+    <state width="1636" height="221" key="GridCell.Tab.0.bottom/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1653032982350" />
+    <state width="1783" height="221" key="GridCell.Tab.0.bottom/0.25.1680.1025/-2560.-106.2560.1330@-2560.-106.2560.1330" timestamp="1653015865110" />
+    <state width="1636" height="221" key="GridCell.Tab.0.center" timestamp="1653032982349">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1636" height="237" key="GridCell.Tab.0.center/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1652954039581" />
-    <state width="1636" height="237" key="GridCell.Tab.0.left" timestamp="1652954039581">
+    <state width="1636" height="221" key="GridCell.Tab.0.center/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1653032982349" />
+    <state width="1783" height="221" key="GridCell.Tab.0.center/0.25.1680.1025/-2560.-106.2560.1330@-2560.-106.2560.1330" timestamp="1653015865109" />
+    <state width="1636" height="221" key="GridCell.Tab.0.left" timestamp="1653032982349">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1636" height="237" key="GridCell.Tab.0.left/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1652954039581" />
-    <state width="1636" height="237" key="GridCell.Tab.0.right" timestamp="1652954039582">
+    <state width="1636" height="221" key="GridCell.Tab.0.left/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1653032982349" />
+    <state width="1783" height="221" key="GridCell.Tab.0.left/0.25.1680.1025/-2560.-106.2560.1330@-2560.-106.2560.1330" timestamp="1653015865108" />
+    <state width="1636" height="221" key="GridCell.Tab.0.right" timestamp="1653032982350">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1636" height="237" key="GridCell.Tab.0.right/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1652954039582" />
+    <state width="1636" height="221" key="GridCell.Tab.0.right/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1653032982350" />
+    <state width="1783" height="221" key="GridCell.Tab.0.right/0.25.1680.1025/-2560.-106.2560.1330@-2560.-106.2560.1330" timestamp="1653015865109" />
     <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1652856826205">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
