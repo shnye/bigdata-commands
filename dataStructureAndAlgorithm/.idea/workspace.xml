@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9e5fec4-1423-43d9-9d75-517f69a95d99" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mf/dataStructure/stack/ArrayStackDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mf/dataStructure/stack/Calculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mf/dataStructure/recursion/MiGong.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mf/dataStructure/recursion/RecursionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mf/dataStructure/stack/PolandNotation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mf/dataStructure/stack/ReversePolishMultiCalc.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mf/dataStructure/stack/ArrayStack2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mf/dataStructure/stack/ArrayStack2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mf/dataStructure/stack/Calculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mf/dataStructure/stack/Calculator.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +88,7 @@
       <recent name="$PROJECT_DIR$/src/main/java/com/mf/dataStructure/stack" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Calculator">
+  <component name="RunManager" selected="Application.MiGong">
     <configuration name="ArrayStackDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.mf.dataStructure.stack.ArrayStackDemo" />
       <module name="dataStructureAndAlgorithm" />
@@ -111,12 +115,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DoubleLinkedListDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.mf.dataStructure.linkedlist.DoubleLinkedListDemo" />
+    <configuration name="MiGong" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mf.dataStructure.recursion.MiGong" />
       <module name="dataStructureAndAlgorithm" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.mf.dataStructure.linkedlist.*" />
+          <option name="PATTERN" value="com.mf.dataStructure.recursion.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -124,12 +128,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Josepfu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.mf.dataStructure.linkedlist.Josepfu" />
+    <configuration name="PolandNotation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mf.dataStructure.stack.PolandNotation" />
       <module name="dataStructureAndAlgorithm" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.mf.dataStructure.linkedlist.*" />
+          <option name="PATTERN" value="com.mf.dataStructure.stack.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -137,12 +141,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SingleLinkedlListDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.mf.dataStructure.linkedlist.SingleLinkedlListDemo" />
+    <configuration name="RecursionTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mf.dataStructure.recursion.RecursionTest" />
       <module name="dataStructureAndAlgorithm" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.mf.dataStructure.linkedlist.*" />
+          <option name="PATTERN" value="com.mf.dataStructure.recursion.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -152,11 +156,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MiGong" />
+        <item itemvalue="Application.RecursionTest" />
+        <item itemvalue="Application.PolandNotation" />
         <item itemvalue="Application.Calculator" />
         <item itemvalue="Application.ArrayStackDemo" />
-        <item itemvalue="Application.Josepfu" />
-        <item itemvalue="Application.DoubleLinkedListDemo" />
-        <item itemvalue="Application.SingleLinkedlListDemo" />
       </list>
     </recent_temporary>
   </component>
@@ -181,7 +185,7 @@
       <workItem from="1652780895981" duration="1154000" />
       <workItem from="1652840429861" duration="9106000" />
       <workItem from="1652926271971" duration="8659000" />
-      <workItem from="1653013415156" duration="9185000" />
+      <workItem from="1653013415156" duration="18327000" />
     </task>
     <servers />
   </component>
@@ -205,29 +209,29 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="606" y="398" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1652772228142" />
-    <state width="1636" height="269" key="GridCell.Tab.0.bottom" timestamp="1653380880081">
+    <state width="1636" height="269" key="GridCell.Tab.0.bottom" timestamp="1653472330016">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1636" height="269" key="GridCell.Tab.0.bottom/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1653380880081" />
+    <state width="1636" height="269" key="GridCell.Tab.0.bottom/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1653472330016" />
     <state width="1783" height="221" key="GridCell.Tab.0.bottom/0.25.1680.1025/-2560.-106.2560.1330@-2560.-106.2560.1330" timestamp="1653015865110" />
-    <state width="1636" height="269" key="GridCell.Tab.0.center" timestamp="1653380880080">
+    <state width="1636" height="269" key="GridCell.Tab.0.center" timestamp="1653472330016">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1636" height="269" key="GridCell.Tab.0.center/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1653380880080" />
+    <state width="1636" height="269" key="GridCell.Tab.0.center/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1653472330016" />
     <state width="1783" height="221" key="GridCell.Tab.0.center/0.25.1680.1025/-2560.-106.2560.1330@-2560.-106.2560.1330" timestamp="1653015865109" />
-    <state width="1636" height="269" key="GridCell.Tab.0.left" timestamp="1653380880080">
+    <state width="1636" height="269" key="GridCell.Tab.0.left" timestamp="1653472330015">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1636" height="269" key="GridCell.Tab.0.left/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1653380880080" />
+    <state width="1636" height="269" key="GridCell.Tab.0.left/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1653472330015" />
     <state width="1783" height="221" key="GridCell.Tab.0.left/0.25.1680.1025/-2560.-106.2560.1330@-2560.-106.2560.1330" timestamp="1653015865108" />
-    <state width="1636" height="269" key="GridCell.Tab.0.right" timestamp="1653380880081">
+    <state width="1636" height="269" key="GridCell.Tab.0.right" timestamp="1653472330016">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1636" height="269" key="GridCell.Tab.0.right/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1653380880081" />
+    <state width="1636" height="269" key="GridCell.Tab.0.right/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1653472330016" />
     <state width="1783" height="221" key="GridCell.Tab.0.right/0.25.1680.1025/-2560.-106.2560.1330@-2560.-106.2560.1330" timestamp="1653015865109" />
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1652856826205">
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1653461142474">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1652856826205" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1653461142474" />
   </component>
 </project>
