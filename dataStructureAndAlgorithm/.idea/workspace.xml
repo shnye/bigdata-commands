@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9e5fec4-1423-43d9-9d75-517f69a95d99" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mf/algorithm/sort/BubbleSort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mf/algorithm/sort/SelectSort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mf/dataStructure/recursion/Queen8.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mf/algorithm/sort/InsertSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mf/algorithm/sort/MergeSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mf/algorithm/sort/QuickSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mf/algorithm/sort/ShellSort.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mf/dataStructure/recursion/MiGong.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mf/dataStructure/recursion/MiGong.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mf/dataStructure/recursion/MiGong.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mf/dataStructure/recursion/MiGong.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mf/algorithm/sort/SelectSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mf/algorithm/sort/SelectSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mf/algorithm/sort/SelectSort.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mf/algorithm/sort/SelectSort.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +88,7 @@
       <recent name="$PROJECT_DIR$/src/main/java/com/mf/dataStructure/stack" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SelectSort">
+  <component name="RunManager" selected="Application.ShellSort">
     <configuration name="BubbleSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.mf.algorithm.sort.BubbleSort" />
       <module name="dataStructureAndAlgorithm" />
@@ -101,12 +102,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MiGong" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.mf.dataStructure.recursion.MiGong" />
+    <configuration name="InsertSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mf.algorithm.sort.InsertSort" />
       <module name="dataStructureAndAlgorithm" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.mf.dataStructure.recursion.*" />
+          <option name="PATTERN" value="com.mf.algorithm.sort.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -114,25 +115,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Queen8" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.mf.dataStructure.recursion.Queen8" />
+    <configuration name="QuickSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mf.algorithm.sort.QuickSort" />
       <module name="dataStructureAndAlgorithm" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.mf.dataStructure.recursion.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RecursionTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.mf.dataStructure.recursion.RecursionTest" />
-      <module name="dataStructureAndAlgorithm" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.mf.dataStructure.recursion.*" />
+          <option name="PATTERN" value="com.mf.algorithm.sort.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -153,13 +141,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ShellSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mf.algorithm.sort.ShellSort" />
+      <module name="dataStructureAndAlgorithm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mf.algorithm.sort.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ShellSort" />
+        <item itemvalue="Application.QuickSort" />
+        <item itemvalue="Application.InsertSort" />
         <item itemvalue="Application.SelectSort" />
         <item itemvalue="Application.BubbleSort" />
-        <item itemvalue="Application.Queen8" />
-        <item itemvalue="Application.MiGong" />
-        <item itemvalue="Application.RecursionTest" />
       </list>
     </recent_temporary>
   </component>
@@ -184,7 +185,7 @@
       <workItem from="1652780895981" duration="1154000" />
       <workItem from="1652840429861" duration="9106000" />
       <workItem from="1652926271971" duration="8659000" />
-      <workItem from="1653013415156" duration="28535000" />
+      <workItem from="1653013415156" duration="39769000" />
     </task>
     <servers />
   </component>
@@ -208,29 +209,29 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="606" y="398" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1652772228142" />
-    <state width="1636" height="169" key="GridCell.Tab.0.bottom" timestamp="1653644602460">
+    <state width="1636" height="169" key="GridCell.Tab.0.bottom" timestamp="1653901923370">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1636" height="169" key="GridCell.Tab.0.bottom/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1653644602460" />
+    <state width="1636" height="169" key="GridCell.Tab.0.bottom/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1653901923370" />
     <state width="1783" height="221" key="GridCell.Tab.0.bottom/0.25.1680.1025/-2560.-106.2560.1330@-2560.-106.2560.1330" timestamp="1653015865110" />
-    <state width="1636" height="169" key="GridCell.Tab.0.center" timestamp="1653644602458">
+    <state width="1636" height="169" key="GridCell.Tab.0.center" timestamp="1653901923369">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1636" height="169" key="GridCell.Tab.0.center/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1653644602458" />
+    <state width="1636" height="169" key="GridCell.Tab.0.center/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1653901923369" />
     <state width="1783" height="221" key="GridCell.Tab.0.center/0.25.1680.1025/-2560.-106.2560.1330@-2560.-106.2560.1330" timestamp="1653015865109" />
-    <state width="1636" height="169" key="GridCell.Tab.0.left" timestamp="1653644602458">
+    <state width="1636" height="169" key="GridCell.Tab.0.left" timestamp="1653901923368">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1636" height="169" key="GridCell.Tab.0.left/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1653644602458" />
+    <state width="1636" height="169" key="GridCell.Tab.0.left/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1653901923368" />
     <state width="1783" height="221" key="GridCell.Tab.0.left/0.25.1680.1025/-2560.-106.2560.1330@-2560.-106.2560.1330" timestamp="1653015865108" />
-    <state width="1636" height="169" key="GridCell.Tab.0.right" timestamp="1653644602459">
+    <state width="1636" height="169" key="GridCell.Tab.0.right" timestamp="1653901923369">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1636" height="169" key="GridCell.Tab.0.right/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1653644602459" />
+    <state width="1636" height="169" key="GridCell.Tab.0.right/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1653901923369" />
     <state width="1783" height="221" key="GridCell.Tab.0.right/0.25.1680.1025/-2560.-106.2560.1330@-2560.-106.2560.1330" timestamp="1653015865109" />
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1653461142474">
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1653900656913">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1653461142474" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1653900656913" />
   </component>
 </project>
