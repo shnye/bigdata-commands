@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9e5fec4-1423-43d9-9d75-517f69a95d99" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mf/dataStructure/hashtab/HashTabDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mf/dataStructure/tree/BinaryTreeDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mf/dataStructure/tree/HuffmanCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mf/dataStructure/tree/HuffmanTree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/dataStructureAndAlgorithm.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mf/dataStructure/hashtab/HashTab.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mf/dataStructure/hashtab/HashTab.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flink_example/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../flink_example/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../简单命令.md" beforeDir="false" afterPath="$PROJECT_DIR$/../简单命令.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +79,9 @@
     <property name="node.js.selected.package.jscs" value="" />
     <property name="node.js.selected.package.standard" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
   <component name="RecentsManager">
@@ -83,13 +92,13 @@
       <recent name="$PROJECT_DIR$/src/main/java/com/mf/dataStructure/stack" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.HashTabDemo">
-    <configuration name="BinarySearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.mf.algorithm.search.BinarySearch" />
+  <component name="RunManager" selected="Application.HuffmanCode">
+    <configuration name="BinaryTreeDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mf.dataStructure.tree.BinaryTreeDemo" />
       <module name="dataStructureAndAlgorithm" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.mf.algorithm.search.*" />
+          <option name="PATTERN" value="com.mf.dataStructure.tree.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -123,12 +132,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InsertValueSearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.mf.algorithm.search.InsertValueSearch" />
+    <configuration name="HuffmanCode" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mf.dataStructure.tree.HuffmanCode" />
       <module name="dataStructureAndAlgorithm" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.mf.algorithm.search.*" />
+          <option name="PATTERN" value="com.mf.dataStructure.tree.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -136,12 +145,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SeqSearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.mf.algorithm.search.SeqSearch" />
+    <configuration name="HuffmanTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mf.dataStructure.tree.HuffmanTree" />
       <module name="dataStructureAndAlgorithm" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.mf.algorithm.search.*" />
+          <option name="PATTERN" value="com.mf.dataStructure.tree.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -151,11 +160,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.HuffmanCode" />
+        <item itemvalue="Application.HuffmanTree" />
+        <item itemvalue="Application.BinaryTreeDemo" />
         <item itemvalue="Application.HashTabDemo" />
         <item itemvalue="Application.FibonacciSearch" />
-        <item itemvalue="Application.InsertValueSearch" />
-        <item itemvalue="Application.BinarySearch" />
-        <item itemvalue="Application.SeqSearch" />
       </list>
     </recent_temporary>
   </component>
@@ -180,7 +189,13 @@
       <workItem from="1652780895981" duration="1154000" />
       <workItem from="1652840429861" duration="9106000" />
       <workItem from="1652926271971" duration="8659000" />
-      <workItem from="1653013415156" duration="69004000" />
+      <workItem from="1653013415156" duration="72575000" />
+      <workItem from="1655116262640" duration="429000" />
+      <workItem from="1655371261412" duration="93000" />
+      <workItem from="1655371436214" duration="527000" />
+      <workItem from="1655778613406" duration="5303000" />
+      <workItem from="1656402300499" duration="4539000" />
+      <workItem from="1656578181503" duration="257000" />
     </task>
     <servers />
   </component>
@@ -188,15 +203,19 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="440" y="187" key="#Project_Structure" timestamp="1656402779172">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="440" y="187" key="#Project_Structure/0.0.1680.1050/-2560.-136.2560.1415@0.0.1680.1050" timestamp="1656402779172" />
     <state x="536" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1652769830511">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="536" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1652769830511" />
-    <state x="653" y="245" key="#com.intellij.ide.util.MemberChooser" timestamp="1654500510713">
+    <state x="653" y="245" key="#com.intellij.ide.util.MemberChooser" timestamp="1655802704107">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="653" y="245" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1652950674015" />
-    <state x="653" y="245" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050/-2560.-136.2560.1415@0.0.1680.1050" timestamp="1654500510713" />
+    <state x="653" y="245" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050/-2560.-136.2560.1415@0.0.1680.1050" timestamp="1655802704107" />
     <state x="587" y="448" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1653987393639">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -206,34 +225,62 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="606" y="398" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1652772228142" />
-    <state width="1636" height="213" key="GridCell.Tab.0.bottom" timestamp="1654504739555">
+    <state width="1636" height="213" key="GridCell.Tab.0.bottom" timestamp="1656578598765">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="1636" height="169" key="GridCell.Tab.0.bottom/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1653978594683" />
-    <state width="1636" height="213" key="GridCell.Tab.0.bottom/0.0.1680.1050/-2560.-136.2560.1415@0.0.1680.1050" timestamp="1654504739555" />
+    <state width="1636" height="213" key="GridCell.Tab.0.bottom/0.0.1680.1050/-2560.-136.2560.1330@0.0.1680.1050" timestamp="1654854701205" />
+    <state width="1636" height="213" key="GridCell.Tab.0.bottom/0.0.1680.1050/-2560.-136.2560.1415@0.0.1680.1050" timestamp="1656578598765" />
+    <state width="1636" height="213" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1656310281730" />
     <state width="1783" height="221" key="GridCell.Tab.0.bottom/0.25.1680.1025/-2560.-106.2560.1330@-2560.-106.2560.1330" timestamp="1653015865110" />
-    <state width="1636" height="213" key="GridCell.Tab.0.center" timestamp="1654504739554">
+    <state width="1636" height="213" key="GridCell.Tab.0.center" timestamp="1656578598763">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="1636" height="169" key="GridCell.Tab.0.center/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1653978594682" />
-    <state width="1636" height="213" key="GridCell.Tab.0.center/0.0.1680.1050/-2560.-136.2560.1415@0.0.1680.1050" timestamp="1654504739554" />
+    <state width="1636" height="213" key="GridCell.Tab.0.center/0.0.1680.1050/-2560.-136.2560.1330@0.0.1680.1050" timestamp="1654854701205" />
+    <state width="1636" height="213" key="GridCell.Tab.0.center/0.0.1680.1050/-2560.-136.2560.1415@0.0.1680.1050" timestamp="1656578598763" />
+    <state width="1636" height="213" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1656310281728" />
     <state width="1783" height="221" key="GridCell.Tab.0.center/0.25.1680.1025/-2560.-106.2560.1330@-2560.-106.2560.1330" timestamp="1653015865109" />
-    <state width="1636" height="213" key="GridCell.Tab.0.left" timestamp="1654504739553">
+    <state width="1636" height="213" key="GridCell.Tab.0.left" timestamp="1656578598763">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="1636" height="169" key="GridCell.Tab.0.left/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1653978594681" />
-    <state width="1636" height="213" key="GridCell.Tab.0.left/0.0.1680.1050/-2560.-136.2560.1415@0.0.1680.1050" timestamp="1654504739553" />
+    <state width="1636" height="213" key="GridCell.Tab.0.left/0.0.1680.1050/-2560.-136.2560.1330@0.0.1680.1050" timestamp="1654854701204" />
+    <state width="1636" height="213" key="GridCell.Tab.0.left/0.0.1680.1050/-2560.-136.2560.1415@0.0.1680.1050" timestamp="1656578598763" />
+    <state width="1636" height="213" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1656310281728" />
     <state width="1783" height="221" key="GridCell.Tab.0.left/0.25.1680.1025/-2560.-106.2560.1330@-2560.-106.2560.1330" timestamp="1653015865108" />
-    <state width="1636" height="213" key="GridCell.Tab.0.right" timestamp="1654504739555">
+    <state width="1636" height="213" key="GridCell.Tab.0.right" timestamp="1656578598764">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="1636" height="169" key="GridCell.Tab.0.right/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1653978594682" />
-    <state width="1636" height="213" key="GridCell.Tab.0.right/0.0.1680.1050/-2560.-136.2560.1415@0.0.1680.1050" timestamp="1654504739555" />
+    <state width="1636" height="213" key="GridCell.Tab.0.right/0.0.1680.1050/-2560.-136.2560.1330@0.0.1680.1050" timestamp="1654854701205" />
+    <state width="1636" height="213" key="GridCell.Tab.0.right/0.0.1680.1050/-2560.-136.2560.1415@0.0.1680.1050" timestamp="1656578598764" />
+    <state width="1636" height="213" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1656310281729" />
     <state width="1783" height="221" key="GridCell.Tab.0.right/0.25.1680.1025/-2560.-106.2560.1330@-2560.-106.2560.1330" timestamp="1653015865109" />
+    <state width="1029" height="1050" key="com.intellij.byteCodeViewer.ShowByteCodeAction" timestamp="1656578151807">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1029" height="1050" key="com.intellij.byteCodeViewer.ShowByteCodeAction/0.0.1680.1050/-2560.-136.2560.1415@0.0.1680.1050" timestamp="1656578151807" />
     <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1653982067015">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1653900656913" />
     <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050/-2560.-136.2560.1415@0.0.1680.1050" timestamp="1653982067015" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/mf/dataStructure/tree/HuffmanCode.java</url>
+          <line>96</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/dataStructureAndAlgorithm$HuffmanCode.ic" NAME="HuffmanCode Coverage Results" MODIFIED="1656578072899" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.mf.dataStructure.tree.*</FILTER>
+    </SUITE>
   </component>
 </project>
