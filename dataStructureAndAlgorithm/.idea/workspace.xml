@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9e5fec4-1423-43d9-9d75-517f69a95d99" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mf/dataStructure/tree/BinaryTreeDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mf/dataStructure/tree/HuffmanCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mf/dataStructure/tree/HuffmanTree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/dataStructureAndAlgorithm.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mf/dataStructure/hashtab/HashTab.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mf/dataStructure/hashtab/HashTab.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../flink_example/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../flink_example/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../简单命令.md" beforeDir="false" afterPath="$PROJECT_DIR$/../简单命令.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mf/dataStructure/tree/HuffmanCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mf/dataStructure/tree/HuffmanCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mf/dataStructure/tree/Code.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mf/dataStructure/tree/Code.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mf/dataStructure/tree/HuffmanCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mf/dataStructure/tree/HuffmanCode.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,7 +191,8 @@
       <workItem from="1655371436214" duration="527000" />
       <workItem from="1655778613406" duration="5303000" />
       <workItem from="1656402300499" duration="4539000" />
-      <workItem from="1656578181503" duration="257000" />
+      <workItem from="1656578181503" duration="7983000" />
+      <workItem from="1656916618010" duration="1509000" />
     </task>
     <servers />
   </component>
@@ -225,54 +222,58 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="606" y="398" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1652772228142" />
-    <state width="1636" height="213" key="GridCell.Tab.0.bottom" timestamp="1656578598765">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state width="1636" height="213" key="GridCell.Tab.0.bottom" timestamp="1656916467175">
+      <screen x="0" y="25" width="1680" height="1025" />
     </state>
     <state width="1636" height="169" key="GridCell.Tab.0.bottom/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1653978594683" />
     <state width="1636" height="213" key="GridCell.Tab.0.bottom/0.0.1680.1050/-2560.-136.2560.1330@0.0.1680.1050" timestamp="1654854701205" />
-    <state width="1636" height="213" key="GridCell.Tab.0.bottom/0.0.1680.1050/-2560.-136.2560.1415@0.0.1680.1050" timestamp="1656578598765" />
+    <state width="1636" height="213" key="GridCell.Tab.0.bottom/0.0.1680.1050/-2560.-136.2560.1415@0.0.1680.1050" timestamp="1656659508455" />
     <state width="1636" height="213" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1656310281730" />
     <state width="1783" height="221" key="GridCell.Tab.0.bottom/0.25.1680.1025/-2560.-106.2560.1330@-2560.-106.2560.1330" timestamp="1653015865110" />
-    <state width="1636" height="213" key="GridCell.Tab.0.center" timestamp="1656578598763">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state width="1636" height="213" key="GridCell.Tab.0.bottom/0.25.1680.1025/-2560.-136.2560.1330@0.25.1680.1025" timestamp="1656916467175" />
+    <state width="1636" height="213" key="GridCell.Tab.0.center" timestamp="1656916467174">
+      <screen x="0" y="25" width="1680" height="1025" />
     </state>
     <state width="1636" height="169" key="GridCell.Tab.0.center/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1653978594682" />
     <state width="1636" height="213" key="GridCell.Tab.0.center/0.0.1680.1050/-2560.-136.2560.1330@0.0.1680.1050" timestamp="1654854701205" />
-    <state width="1636" height="213" key="GridCell.Tab.0.center/0.0.1680.1050/-2560.-136.2560.1415@0.0.1680.1050" timestamp="1656578598763" />
+    <state width="1636" height="213" key="GridCell.Tab.0.center/0.0.1680.1050/-2560.-136.2560.1415@0.0.1680.1050" timestamp="1656659508454" />
     <state width="1636" height="213" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1656310281728" />
     <state width="1783" height="221" key="GridCell.Tab.0.center/0.25.1680.1025/-2560.-106.2560.1330@-2560.-106.2560.1330" timestamp="1653015865109" />
-    <state width="1636" height="213" key="GridCell.Tab.0.left" timestamp="1656578598763">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state width="1636" height="213" key="GridCell.Tab.0.center/0.25.1680.1025/-2560.-136.2560.1330@0.25.1680.1025" timestamp="1656916467174" />
+    <state width="1636" height="213" key="GridCell.Tab.0.left" timestamp="1656916467173">
+      <screen x="0" y="25" width="1680" height="1025" />
     </state>
     <state width="1636" height="169" key="GridCell.Tab.0.left/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1653978594681" />
     <state width="1636" height="213" key="GridCell.Tab.0.left/0.0.1680.1050/-2560.-136.2560.1330@0.0.1680.1050" timestamp="1654854701204" />
-    <state width="1636" height="213" key="GridCell.Tab.0.left/0.0.1680.1050/-2560.-136.2560.1415@0.0.1680.1050" timestamp="1656578598763" />
+    <state width="1636" height="213" key="GridCell.Tab.0.left/0.0.1680.1050/-2560.-136.2560.1415@0.0.1680.1050" timestamp="1656659508453" />
     <state width="1636" height="213" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1656310281728" />
     <state width="1783" height="221" key="GridCell.Tab.0.left/0.25.1680.1025/-2560.-106.2560.1330@-2560.-106.2560.1330" timestamp="1653015865108" />
-    <state width="1636" height="213" key="GridCell.Tab.0.right" timestamp="1656578598764">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state width="1636" height="213" key="GridCell.Tab.0.left/0.25.1680.1025/-2560.-136.2560.1330@0.25.1680.1025" timestamp="1656916467173" />
+    <state width="1636" height="213" key="GridCell.Tab.0.right" timestamp="1656916467174">
+      <screen x="0" y="25" width="1680" height="1025" />
     </state>
     <state width="1636" height="169" key="GridCell.Tab.0.right/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1653978594682" />
     <state width="1636" height="213" key="GridCell.Tab.0.right/0.0.1680.1050/-2560.-136.2560.1330@0.0.1680.1050" timestamp="1654854701205" />
-    <state width="1636" height="213" key="GridCell.Tab.0.right/0.0.1680.1050/-2560.-136.2560.1415@0.0.1680.1050" timestamp="1656578598764" />
+    <state width="1636" height="213" key="GridCell.Tab.0.right/0.0.1680.1050/-2560.-136.2560.1415@0.0.1680.1050" timestamp="1656659508455" />
     <state width="1636" height="213" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1656310281729" />
     <state width="1783" height="221" key="GridCell.Tab.0.right/0.25.1680.1025/-2560.-106.2560.1330@-2560.-106.2560.1330" timestamp="1653015865109" />
+    <state width="1636" height="213" key="GridCell.Tab.0.right/0.25.1680.1025/-2560.-136.2560.1330@0.25.1680.1025" timestamp="1656916467174" />
     <state width="1029" height="1050" key="com.intellij.byteCodeViewer.ShowByteCodeAction" timestamp="1656578151807">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="1029" height="1050" key="com.intellij.byteCodeViewer.ShowByteCodeAction/0.0.1680.1050/-2560.-136.2560.1415@0.0.1680.1050" timestamp="1656578151807" />
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1653982067015">
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1656644827929">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1653900656913" />
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050/-2560.-136.2560.1415@0.0.1680.1050" timestamp="1653982067015" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050/-2560.-136.2560.1415@0.0.1680.1050" timestamp="1656644827929" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/mf/dataStructure/tree/HuffmanCode.java</url>
-          <line>96</line>
+          <line>211</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

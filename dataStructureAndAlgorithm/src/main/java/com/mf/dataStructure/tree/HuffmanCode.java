@@ -6,6 +6,8 @@ public class HuffmanCode {
     public static void main(String[] args) {
         String str = "i like like like java do you like a java";
         byte[] contenBytes = str.getBytes();
+
+        /* todo 分步步骤
         System.out.println(contenBytes.length);
         List<Code> codes = getCodes(contenBytes);
         System.out.println(codes);
@@ -15,6 +17,118 @@ public class HuffmanCode {
         //getCodes(huffmanTree,"",stringBuilder);
         Map<Byte, String> huffmanCodes = getCodes(huffmanTree);
         System.out.println(huffmanCodes);
+
+        byte[] huffmanCodeBytes = zip(contenBytes, huffmanCodes);
+        System.out.println(Arrays.toString(huffmanCodeBytes));
+         */
+        System.out.println(Arrays.toString(huffmanZip(contenBytes)));
+
+    }
+
+    //完成数据解压
+    //思路
+    //1.将huffmanCodeBytes 重新转成赫夫曼编码对应的二进制的字符串
+    //2.将赫夫曼编码对应的二进制的字符串 对照赫夫曼编码重新转成 字节数组
+
+    /**
+     * 解码
+     * @param huffmanCodes 赫夫曼编码表map
+     * @param huffmanBytes 赫夫曼编码对应的自己数组
+     * @return 原来的字符串对应的数组
+     */
+     private static byte[] decode(Map<Byte,String> huffmanCodes,byte[] huffmanBytes){
+        //1。先得到huffmanBytes 对应的二进制字符串
+         StringBuilder stringBuilder = new StringBuilder();
+         for (int i = 0; i < huffmanBytes.length; i++) {
+             byte b = huffmanBytes[i];
+             boolean flag = (i == huffmanBytes.length -1);
+             stringBuilder.append(byteToBitString(!flag,b));
+         }
+         //把字符串按指定的赫夫曼编码进行解码
+         //把赫夫曼编码进行调换，因为进行反向查询 a->100 => 100->a
+     }
+
+    /**
+     * 将一个byte转成二进制的字符串
+     * @param b
+     * @flag 表示是否需要补高位
+     * @return
+     */
+    private static String byteToBitString(boolean flag ,byte b){
+        //使用变量保存b
+        int temp = b; //将byte转成temp  因为Byte包装类中没有toBinaryString方法  integer中有
+        //如果是正数还存在补高位
+        if(flag){
+            temp |= 256; //按位与 256 =》 1 0000 0000  | 0000 0001 =》 10000 0001
+        }
+
+        //todo 注意这里返回的是temp对应的二进制的补码
+        String str = Integer.toBinaryString(temp);
+        // 应该截取后面的8位
+        if(flag){
+            return str.substring(str.length() - 8);
+        }else{
+            return str;
+        }
+
+    }
+
+    /**
+     * 封装压缩方法
+     * @param bytes 原始的字符串对应的额字节数组
+     * @return 经过处理以后的字节数组（压缩后）
+     */
+    private static byte[] huffmanZip(byte[] bytes){
+        List<Code> codes = getCodes(bytes);
+        //根据codes创建赫夫曼树
+        Code huffmanTree = createHuffmanTree(codes);
+        //生成对应的huffman编码
+        Map<Byte, String> huffmanCodes = getCodes(huffmanTree);
+        //根据生成的赫夫曼编码压缩，得到压缩后的赫夫曼编码字节数组
+        byte[] huffmanCodeBytes = zip(bytes, huffmanCodes);
+        return huffmanCodeBytes;
+    }
+
+    //todo  二进制 原码 反码 补码知识 需要学习
+
+    /**
+     * 将一个字符串对应的byte数组通过生成的赫夫曼编码表 进行压缩
+     * @param bytes 原始的字符串对应的byte数组
+     * @param huffmanCodes huffmanCodes生成的赫夫曼编码map
+     * @return 赫夫曼编码处理后的byte数组
+     */
+    private static byte[] zip(byte[] bytes,Map<Byte,String> huffmanCodes){
+        //利用赫夫曼编码表 将bytes数组转成赫夫曼编码对应的字符串
+        StringBuilder stringBuilder = new StringBuilder();
+
+        //遍历byte数组
+        for (byte b : bytes) {
+            stringBuilder.append(huffmanCodes.get(b));
+        }
+
+        //int len = (stringBuilder.length() + 7) / 8;
+        int len;
+        if(stringBuilder.length() %8 == 0){
+            len = stringBuilder.length() / 8;
+        }else{
+            len = stringBuilder.length() / 8 + 1;
+        }
+        byte[] by = new byte[len];
+        int index = 0 ; //记录第几个byte
+        for (int i = 0; i < stringBuilder.length(); i+=8) {
+            String strByte;
+            if(i + 8 > stringBuilder.length()){ //不够8位
+                strByte = stringBuilder.substring(i);
+            }else{
+                strByte = stringBuilder.substring(i,i + 8);
+            }
+
+
+            //将strByte转成一个byte 放到by中
+            by[index] = (byte)Integer.parseInt(strByte,2); //转成二进制
+            index ++;
+        }
+        return by;
     }
 
 
