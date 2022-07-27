@@ -39,13 +39,16 @@ public class HuffmanCode {
      private static byte[] decode(Map<Byte,String> huffmanCodes,byte[] huffmanBytes){
         //1。先得到huffmanBytes 对应的二进制字符串
          StringBuilder stringBuilder = new StringBuilder();
-         for (int i = 0; i < huffmanBytes.length; i++) {
-             byte b = huffmanBytes[i];
-             boolean flag = (i == huffmanBytes.length -1);
-             stringBuilder.append(byteToBitString(!flag,b));
-         }
+        for (int i = 0; i < huffmanBytes.length; i++) {
+            byte b = huffmanBytes[i];
+            boolean flag = (i == huffmanBytes.length -1);
+            stringBuilder.append(byteToBitString(!flag,b));
+        }
          //把字符串按指定的赫夫曼编码进行解码
          //把赫夫曼编码进行调换，因为进行反向查询 a->100 => 100->a
+
+         return huffmanBytes;
+
      }
 
     /**

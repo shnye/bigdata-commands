@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="a9e5fec4-1423-43d9-9d75-517f69a95d99" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mf/dataStructure/binarysorttree/BinarySortTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mf/dataStructure/binarysorttree/BinarySortTreeDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mf/dataStructure/binarysorttree/Node.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mf/dataStructure/tree/HuffmanCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mf/dataStructure/tree/HuffmanCode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/mf/dataStructure/tree/Code.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mf/dataStructure/tree/Code.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/mf/dataStructure/tree/HuffmanCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mf/dataStructure/tree/HuffmanCode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../简单命令.md" beforeDir="false" afterPath="$PROJECT_DIR$/../简单命令.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +43,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -44,42 +54,26 @@
         <option name="userSettingsFile" value="$USER_HOME$/apache-maven-3.6.3/conf/settings.xml" />
       </MavenGeneralSettings>
     </option>
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="ProjectId" id="29EwFcRwokdH1opeEjflofbP8X6" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/mf/dataStructure/stack" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.jscs" value="project" />
-    <property name="node.js.path.for.package.standard" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.jscs" value="" />
-    <property name="node.js.selected.package.standard" value="" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="File.Encoding" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  }
+}</component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.mf.dataStructure" />
@@ -88,13 +82,13 @@
       <recent name="$PROJECT_DIR$/src/main/java/com/mf/dataStructure/stack" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.HuffmanCode">
-    <configuration name="BinaryTreeDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.mf.dataStructure.tree.BinaryTreeDemo" />
+  <component name="RunManager" selected="Application.BinarySortTreeDemo">
+    <configuration name="BinarySortTreeDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mf.dataStructure.binarysorttree.BinarySortTreeDemo" />
       <module name="dataStructureAndAlgorithm" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.mf.dataStructure.tree.*" />
+          <option name="PATTERN" value="com.mf.dataStructure.binarysorttree.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -102,12 +96,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FibonacciSearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.mf.algorithm.search.FibonacciSearch" />
+    <configuration name="BinaryTreeDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mf.dataStructure.tree.BinaryTreeDemo" />
       <module name="dataStructureAndAlgorithm" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.mf.algorithm.search.*" />
+          <option name="PATTERN" value="com.mf.dataStructure.tree.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -156,21 +150,15 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BinarySortTreeDemo" />
         <item itemvalue="Application.HuffmanCode" />
         <item itemvalue="Application.HuffmanTree" />
         <item itemvalue="Application.BinaryTreeDemo" />
         <item itemvalue="Application.HashTabDemo" />
-        <item itemvalue="Application.FibonacciSearch" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SbtLocalSettings">
-    <option name="projectSyncType">
-      <map>
-        <entry key="$USER_HOME$/IdeaProjects/scala" value="PREVIEW" />
-      </map>
-    </option>
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -192,92 +180,23 @@
       <workItem from="1655778613406" duration="5303000" />
       <workItem from="1656402300499" duration="4539000" />
       <workItem from="1656578181503" duration="7983000" />
-      <workItem from="1656916618010" duration="1509000" />
+      <workItem from="1656916618010" duration="1710000" />
+      <workItem from="1657501975139" duration="2086000" />
+      <workItem from="1657506987367" duration="627000" />
+      <workItem from="1657508299810" duration="733000" />
+      <workItem from="1657518310136" duration="11000" />
+      <workItem from="1657518685913" duration="485000" />
+      <workItem from="1657519218367" duration="1266000" />
+      <workItem from="1657522756061" duration="856000" />
+      <workItem from="1658112541583" duration="413000" />
+      <workItem from="1658213901219" duration="493000" />
+      <workItem from="1658911074913" duration="2004000" />
+      <workItem from="1658914070545" duration="387000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="440" y="187" key="#Project_Structure" timestamp="1656402779172">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state x="440" y="187" key="#Project_Structure/0.0.1680.1050/-2560.-136.2560.1415@0.0.1680.1050" timestamp="1656402779172" />
-    <state x="536" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1652769830511">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state x="536" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1652769830511" />
-    <state x="653" y="245" key="#com.intellij.ide.util.MemberChooser" timestamp="1655802704107">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state x="653" y="245" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1652950674015" />
-    <state x="653" y="245" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050/-2560.-136.2560.1415@0.0.1680.1050" timestamp="1655802704107" />
-    <state x="587" y="448" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1653987393639">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state x="635" y="448" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1652772225851" />
-    <state x="587" y="448" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1680.1050/-2560.-136.2560.1415@0.0.1680.1050" timestamp="1653987393639" />
-    <state x="606" y="398" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1652772228142">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state x="606" y="398" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1652772228142" />
-    <state width="1636" height="213" key="GridCell.Tab.0.bottom" timestamp="1656916467175">
-      <screen x="0" y="25" width="1680" height="1025" />
-    </state>
-    <state width="1636" height="169" key="GridCell.Tab.0.bottom/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1653978594683" />
-    <state width="1636" height="213" key="GridCell.Tab.0.bottom/0.0.1680.1050/-2560.-136.2560.1330@0.0.1680.1050" timestamp="1654854701205" />
-    <state width="1636" height="213" key="GridCell.Tab.0.bottom/0.0.1680.1050/-2560.-136.2560.1415@0.0.1680.1050" timestamp="1656659508455" />
-    <state width="1636" height="213" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1656310281730" />
-    <state width="1783" height="221" key="GridCell.Tab.0.bottom/0.25.1680.1025/-2560.-106.2560.1330@-2560.-106.2560.1330" timestamp="1653015865110" />
-    <state width="1636" height="213" key="GridCell.Tab.0.bottom/0.25.1680.1025/-2560.-136.2560.1330@0.25.1680.1025" timestamp="1656916467175" />
-    <state width="1636" height="213" key="GridCell.Tab.0.center" timestamp="1656916467174">
-      <screen x="0" y="25" width="1680" height="1025" />
-    </state>
-    <state width="1636" height="169" key="GridCell.Tab.0.center/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1653978594682" />
-    <state width="1636" height="213" key="GridCell.Tab.0.center/0.0.1680.1050/-2560.-136.2560.1330@0.0.1680.1050" timestamp="1654854701205" />
-    <state width="1636" height="213" key="GridCell.Tab.0.center/0.0.1680.1050/-2560.-136.2560.1415@0.0.1680.1050" timestamp="1656659508454" />
-    <state width="1636" height="213" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1656310281728" />
-    <state width="1783" height="221" key="GridCell.Tab.0.center/0.25.1680.1025/-2560.-106.2560.1330@-2560.-106.2560.1330" timestamp="1653015865109" />
-    <state width="1636" height="213" key="GridCell.Tab.0.center/0.25.1680.1025/-2560.-136.2560.1330@0.25.1680.1025" timestamp="1656916467174" />
-    <state width="1636" height="213" key="GridCell.Tab.0.left" timestamp="1656916467173">
-      <screen x="0" y="25" width="1680" height="1025" />
-    </state>
-    <state width="1636" height="169" key="GridCell.Tab.0.left/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1653978594681" />
-    <state width="1636" height="213" key="GridCell.Tab.0.left/0.0.1680.1050/-2560.-136.2560.1330@0.0.1680.1050" timestamp="1654854701204" />
-    <state width="1636" height="213" key="GridCell.Tab.0.left/0.0.1680.1050/-2560.-136.2560.1415@0.0.1680.1050" timestamp="1656659508453" />
-    <state width="1636" height="213" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1656310281728" />
-    <state width="1783" height="221" key="GridCell.Tab.0.left/0.25.1680.1025/-2560.-106.2560.1330@-2560.-106.2560.1330" timestamp="1653015865108" />
-    <state width="1636" height="213" key="GridCell.Tab.0.left/0.25.1680.1025/-2560.-136.2560.1330@0.25.1680.1025" timestamp="1656916467173" />
-    <state width="1636" height="213" key="GridCell.Tab.0.right" timestamp="1656916467174">
-      <screen x="0" y="25" width="1680" height="1025" />
-    </state>
-    <state width="1636" height="169" key="GridCell.Tab.0.right/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1653978594682" />
-    <state width="1636" height="213" key="GridCell.Tab.0.right/0.0.1680.1050/-2560.-136.2560.1330@0.0.1680.1050" timestamp="1654854701205" />
-    <state width="1636" height="213" key="GridCell.Tab.0.right/0.0.1680.1050/-2560.-136.2560.1415@0.0.1680.1050" timestamp="1656659508455" />
-    <state width="1636" height="213" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1656310281729" />
-    <state width="1783" height="221" key="GridCell.Tab.0.right/0.25.1680.1025/-2560.-106.2560.1330@-2560.-106.2560.1330" timestamp="1653015865109" />
-    <state width="1636" height="213" key="GridCell.Tab.0.right/0.25.1680.1025/-2560.-136.2560.1330@0.25.1680.1025" timestamp="1656916467174" />
-    <state width="1029" height="1050" key="com.intellij.byteCodeViewer.ShowByteCodeAction" timestamp="1656578151807">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state width="1029" height="1050" key="com.intellij.byteCodeViewer.ShowByteCodeAction/0.0.1680.1050/-2560.-136.2560.1415@0.0.1680.1050" timestamp="1656578151807" />
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1656644827929">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050/-2560.-106.2560.1415@0.0.1680.1050" timestamp="1653900656913" />
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050/-2560.-136.2560.1415@0.0.1680.1050" timestamp="1656644827929" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/mf/dataStructure/tree/HuffmanCode.java</url>
-          <line>211</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/dataStructureAndAlgorithm$HuffmanCode.ic" NAME="HuffmanCode Coverage Results" MODIFIED="1656578072899" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
