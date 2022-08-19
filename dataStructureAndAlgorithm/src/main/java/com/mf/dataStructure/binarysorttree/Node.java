@@ -41,7 +41,7 @@ public class Node {
      * 添加节点
      * @param node
      */
-    public void  add(Node node){
+    public void add(Node node){
         if (node != null) {
            if(node.value < this.value){
                if(this.left == null){

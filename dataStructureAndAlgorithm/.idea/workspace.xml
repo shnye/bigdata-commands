@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9e5fec4-1423-43d9-9d75-517f69a95d99" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mf/dataStructure/binarysorttree/BinarySortTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mf/dataStructure/binarysorttree/BinarySortTreeDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mf/dataStructure/binarysorttree/Node.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mf/dataStructure/tree/HuffmanCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mf/dataStructure/tree/HuffmanCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mf/dataStructure/tree/Code.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mf/dataStructure/tree/Code.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mf/dataStructure/tree/HuffmanCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mf/dataStructure/tree/HuffmanCode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../简单命令.md" beforeDir="false" afterPath="$PROJECT_DIR$/../简单命令.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mf/dataStructure/binarysorttree/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mf/dataStructure/binarysorttree/Node.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,7 +185,7 @@
       <workItem from="1658112541583" duration="413000" />
       <workItem from="1658213901219" duration="493000" />
       <workItem from="1658911074913" duration="2004000" />
-      <workItem from="1658914070545" duration="387000" />
+      <workItem from="1658914070545" duration="2363000" />
     </task>
     <servers />
   </component>
