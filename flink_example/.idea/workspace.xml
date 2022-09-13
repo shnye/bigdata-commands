@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="5af1de06-e084-420b-8c1c-7d54ab947c0a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../dataStructureAndAlgorithm/src/main/java/com/mf/dataStructure/tree/BinaryTreeDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dataStructureAndAlgorithm/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../dataStructureAndAlgorithm/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dataStructureAndAlgorithm/target/classes/com/mf/dataStructure/hashtab/HashTab.class" beforeDir="false" afterPath="$PROJECT_DIR$/../dataStructureAndAlgorithm/target/classes/com/mf/dataStructure/hashtab/HashTab.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spark_example/src/main/scala/com/mufeng/spark/app/WorldCount.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spark_example/src/main/scala/com/mufeng/spark/app/rddtest.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/mf/app/example.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/mf/app/example.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/mf/utils/kafkaUtils.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/mf/utils/kafkaUtils.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spark_example/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spark_example/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spark_example/src/main/scala/com/mufeng/spark/app/ManualCommitOffset.scala" beforeDir="false" afterPath="$PROJECT_DIR$/../spark_example/src/main/scala/com/mufeng/spark/app/ManualCommitOffset.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../简单命令.md" beforeDir="false" afterPath="$PROJECT_DIR$/../简单命令.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,6 +45,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -45,50 +56,27 @@
         <option name="userSettingsFile" value="$USER_HOME$/apache-maven-3.6.3/conf/settings.xml" />
       </MavenGeneralSettings>
     </option>
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="ProjectId" id="27B3xUt2ttRlsbYKSVgvbKJIbeP" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.jscs" value="project" />
-    <property name="node.js.path.for.package.standard" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.jscs" value="" />
-    <property name="node.js.selected.package.standard" value="" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="scala_project_settings_configurable.last_selected_tab_index" value="6" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
-  </component>
-  <component name="SbtLocalSettings">
-    <option name="projectSyncType">
-      <map>
-        <entry key="$USER_HOME$/IdeaProjects/scala" value="PREVIEW" />
-      </map>
-    </option>
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -107,11 +95,12 @@
       <workItem from="1649817394731" duration="400000" />
       <workItem from="1655116279951" duration="456000" />
       <workItem from="1655371260194" duration="19000" />
+      <workItem from="1663052229935" duration="4406000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="187" key="#Project_Structure" timestamp="1648779937830">

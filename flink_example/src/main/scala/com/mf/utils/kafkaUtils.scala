@@ -1,10 +1,9 @@
 package com.mf.utils
 
 import java.util.Properties
-
 import org.apache.flink.api.common.serialization.SimpleStringSchema
 import org.apache.flink.streaming.api.scala._
-import org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumer011
+import org.apache.flink.streaming.connectors.kafka.{FlinkKafkaConsumer}
 import com.mf.config
 
 object kafkaUtils {
@@ -18,7 +17,7 @@ object kafkaUtils {
     properties.setProperty("enable,auto.commit","false")
     //properties.setProperty("auto.offset.reset", "earliest")
 
-    val KafkaStream: DataStream[String] = env.addSource(new FlinkKafkaConsumer011[String](topic, new SimpleStringSchema(), properties))
+    val KafkaStream: DataStream[String] = env.addSource(new FlinkKafkaConsumer[String](topic, new SimpleStringSchema(), properties))
     KafkaStream
   }
 }

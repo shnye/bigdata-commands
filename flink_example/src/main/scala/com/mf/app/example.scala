@@ -2,28 +2,50 @@ package com.mf.app
 
 import com.mf.bean.result
 import org.apache.flink.api.common.restartstrategy.RestartStrategies
-import org.apache.flink.contrib.streaming.state.RocksDBStateBackend
+import org.apache.flink.contrib.streaming.state.{EmbeddedRocksDBStateBackend, RocksDBStateBackend}
 import org.apache.flink.streaming.api.{CheckpointingMode, TimeCharacteristic}
 import org.apache.flink.streaming.api.scala._
 import com.mf.config
 import com.mf.sink.{MyJDBCSink, redisSink}
 import com.mf.utils.{MyPeriodicAssigner, kafkaUtils}
 import org.apache.flink.api.common.serialization.SimpleStringSchema
+import org.apache.flink.runtime.state.storage.{FileSystemCheckpointStorage, JobManagerCheckpointStorage}
 import org.apache.flink.streaming.api.functions.timestamps.BoundedOutOfOrdernessTimestampExtractor
 import org.apache.flink.streaming.api.windowing.assigners.TumblingProcessingTimeWindows
 import org.apache.flink.streaming.api.windowing.time.Time
 import org.apache.flink.streaming.api.windowing.triggers.{ContinuousEventTimeTrigger, ContinuousProcessingTimeTrigger}
+import org.apache.flink.streaming.api.windowing.windows.TimeWindow
 import org.apache.flink.streaming.connectors.kafka._
 import org.apache.flink.streaming.connectors.redis.RedisSink
 
 object example {
   def main(args: Array[String]): Unit = {
     val env: StreamExecutionEnvironment = StreamExecutionEnvironment.getExecutionEnvironment
+
     //1.启用checkpoints检查点，指定触发检查点的（插入barrier）间隔时间
-    env.setStateBackend( new RocksDBStateBackend(config.CHECK_POINT_URL, true) )
+    /*
+    flink1.13 状态后端新老版本参考
+    格式 ：env.setStateBackend = env.setStateBackend + env.getCheckpointConfig.setCheckpointStorage
+    MemoryStateBackend = 	HashMapStateBackend + JobManagerCheckpointStorage
+    FsStateBackend = 	HashMapStateBackend + FileSystemCheckpointStorage
+    RocksDBStateBackend	= EmbeddedRocksDBStateBackend + FileSystemCheckpointStorage
+     */
+    env.setStateBackend( new EmbeddedRocksDBStateBackend(true))
+    //env.setStateBackend( new RocksDBStateBackend(config.CHECK_POINT_URL, true) )   1.13以前的版本
+    
+    /*
+    //设置检查点存储方法一：存储检查点到 JobManager 堆内存 1.13以后才加入
+    env.getCheckpointConfig
+      .setCheckpointStorage(new JobManagerCheckpointStorage())
+     */
+    // 设置检查点存储方法二：配置存储检查点到文件系统 1.13以后才加入
+    env.getCheckpointConfig
+      .setCheckpointStorage(new FileSystemCheckpointStorage("hdfs://namenode:40010/flink/checkpoints"))
+
 
     //TODO 设置时间为事件时间，下面还需定义watermark 若不设置则默认为processingTime
     env.setStreamTimeCharacteristic(TimeCharacteristic.EventTime)
+
     //TODO 设置waterMark产生的周期为1s 系统默认为200毫秒，一般使用系统默认即可
     env.getConfig.setAutoWatermarkInterval(1000)
 
@@ -36,7 +58,16 @@ object example {
     env.getCheckpointConfig
       .setCheckpointTimeout(10000L) //超时时间，过时间则弃用
     env.getCheckpointConfig
-      .setMaxConcurrentCheckpoints(2)  //同一时间进行的checkPoints个数
+      .setMaxConcurrentCheckpoints(1)  //同一时间进行的checkPoints个数
+
+    // 启用不对齐的检查点保存方式:不再执行检查点的分界线对齐操作，启用之后可以大大减少产生背压时的检查点保存时间
+    //需要setCheckpointingMode为EXACTLY_ONCE；setMaxConcurrentCheckpoints为1
+    env.getCheckpointConfig
+      .enableUnalignedCheckpoints()
+
+
+
+
     env.getCheckpointConfig
       .setMinPauseBetweenCheckpoints(500L) //两次做checkPoint之间，至少要留下多少时间处理数据 （完成checkPoint的时间）
     env.getCheckpointConfig
@@ -92,7 +123,7 @@ object example {
       //todo 解决时区问题
       .window(TumblingProcessingTimeWindows.of(Time.days(1), Time.hours(-8)))
       //todo 设置触发器 根据实际需求使用ContinuousEventTimeTrigger/ContinuousProcessingTimeTrigger/等/自定义
-      .trigger(ContinuousProcessingTimeTrigger.of(Time.seconds(5)))
+      .trigger(ContinuousProcessingTimeTrigger.of[TimeWindow](Time.seconds(5)))
       //TODO 设置允许时间迟到时间（一般不用，会在watermark定义时就做好等待时间设置），不设置则为弃用迟到数据
       .allowedLateness(Time.seconds(2))
       //TODO 一般会把迟到的数据进行收集,根据标签进行收集

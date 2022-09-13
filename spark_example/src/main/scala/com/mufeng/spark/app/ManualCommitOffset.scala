@@ -19,7 +19,10 @@ object ManualCommitOffset {
     val conf = new SparkConf()
       .setAppName(ManualCommitOffset.getClass.getSimpleName)
       .setMaster("local[1]")
+      //替换默认的序列化机制
       .set("spark.serializer",ConfigConstants.sparkSerializer)
+      // 注册需要使用 kryo 序列化的自定义类
+      //.registerKryoClasses(Array(classOf[Searcher]))
 
     val ssc = new StreamingContext(conf, batchInterval)
     // 必须开启checkpoint,否则会报错
