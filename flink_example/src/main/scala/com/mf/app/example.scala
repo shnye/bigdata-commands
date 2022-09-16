@@ -9,7 +9,12 @@ import com.mf.config
 import com.mf.sink.{MyJDBCSink, redisSink}
 import com.mf.utils.{MyPeriodicAssigner, kafkaUtils}
 import org.apache.flink.api.common.serialization.SimpleStringSchema
+import org.apache.flink.runtime.state.{FunctionInitializationContext, FunctionSnapshotContext}
 import org.apache.flink.runtime.state.storage.{FileSystemCheckpointStorage, JobManagerCheckpointStorage}
+import org.apache.flink.streaming.api.checkpoint.CheckpointedFunction
+import org.apache.flink.streaming.api.datastream.SingleOutputStreamOperator
+import org.apache.flink.streaming.api.functions.sink.RichSinkFunction
+import org.apache.flink.streaming.api.functions.source.SourceFunction
 import org.apache.flink.streaming.api.functions.timestamps.BoundedOutOfOrdernessTimestampExtractor
 import org.apache.flink.streaming.api.windowing.assigners.TumblingProcessingTimeWindows
 import org.apache.flink.streaming.api.windowing.time.Time
@@ -17,6 +22,9 @@ import org.apache.flink.streaming.api.windowing.triggers.{ContinuousEventTimeTri
 import org.apache.flink.streaming.api.windowing.windows.TimeWindow
 import org.apache.flink.streaming.connectors.kafka._
 import org.apache.flink.streaming.connectors.redis.RedisSink
+import org.apache.flink.streaming.runtime.operators.GenericWriteAheadSink
+
+import java.util.Properties
 
 object example {
   def main(args: Array[String]): Unit = {
@@ -32,7 +40,7 @@ object example {
      */
     env.setStateBackend( new EmbeddedRocksDBStateBackend(true))
     //env.setStateBackend( new RocksDBStateBackend(config.CHECK_POINT_URL, true) )   1.13以前的版本
-    
+
     /*
     //设置检查点存储方法一：存储检查点到 JobManager 堆内存 1.13以后才加入
     env.getCheckpointConfig
@@ -131,6 +139,8 @@ object example {
       // TODO: 编写聚合逻辑代码，可以自定义processFunction进行计算
       .sum(1)
 
+    
+
 
     //todo 通过标签获取侧输出流
     val hourOutputStream = outputStream.getSideOutput(outputTag)
@@ -145,6 +155,10 @@ object example {
 
 
 
+
   }
+
+
+
 
 }

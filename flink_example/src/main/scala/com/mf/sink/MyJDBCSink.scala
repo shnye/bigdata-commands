@@ -21,8 +21,8 @@ class MyJDBCSink() extends RichSinkFunction[result]{
       "insert into example (key,value) values ( ?, ?)")
     //updateStmt = conn.prepareStatement("update temp set temperature = ? where sensor = ?")
   }
-  override def invoke(value: result, context: SinkFunction.Context[_]): Unit = {
 
+  override def invoke(value: result, context: SinkFunction.Context): Unit = {
     //TODO 插入数据
     val pv = value.value
     for (elem <- pv) {
